@@ -14,6 +14,7 @@ function Logo() {
         width={110}
         height={110}
         className="w-[80px] h-[80px] md:w-[110] md:h-[110]"
+        priority
       />
     </Link>
   );
