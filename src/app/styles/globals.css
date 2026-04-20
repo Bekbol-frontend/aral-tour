@@ -101,7 +101,7 @@
 
 body {
   font-family: var(--font-nunito);
-  background-color: var(--color-base-bg);
+  background-color: #fcfcfc;
 }
 
 #main {
