@@ -33,7 +33,7 @@ async function HeaderContact() {
         </button>
         <Description>{telegram_username}</Description>
         <a
-          href={`https://t.me/${telegram_username}`}
+          href={`https://t.me/${telegram_url}`}
           className={`absolute inset-0`}
         />
       </div>
