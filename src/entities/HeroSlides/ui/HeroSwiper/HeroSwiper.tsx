@@ -51,7 +51,7 @@ function HeroSwiper({ data }: IProps) {
               backgroundPosition: "center",
             }}
           >
-            <div className="max-w-[700] mx-auto p-20">
+            <div className="max-w-[700] mx-auto px-50 py-20 md:px-30">
               <Title variyant="small" className="text-primary-50">
                 {el.title}
               </Title>
