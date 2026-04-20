@@ -3,9 +3,11 @@
 import { Link, usePathname } from "@/i18n/navigation";
 import { menuItems } from "../menu-items";
 import { clsx } from "@/shared/lib/clsx";
+import { useTranslations } from "next-intl";
 
 function HeaderMenu() {
   const pathname = usePathname();
+  const t = useTranslations("HeaderMenu");
 
   return (
     <div className="flex gap-5 md:gap-15 flex-col md:flex-row">
@@ -22,7 +24,7 @@ function HeaderMenu() {
             },
           )}
         >
-          {el.name}
+          {t(el.name)}
         </Link>
       ))}
     </div>

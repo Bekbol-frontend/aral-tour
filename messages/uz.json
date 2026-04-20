@@ -5,5 +5,13 @@
 
   "EmptyData": {
     "title": "Maʼlumot yoʻq"
+  },
+
+  "HeaderMenu": {
+    "Home page": "Bosh sahifa",
+    "Tour catalog": "Ekskursiya katalogi",
+    "About Us": "Biz haqimizda",
+    "Reviews": "Sharhlar",
+    "Contacts": "Kontaktlar"
   }
 }

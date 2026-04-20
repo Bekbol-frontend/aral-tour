@@ -5,5 +5,13 @@
 
   "EmptyData": {
     "title": "Нет данных"
+  },
+
+  "HeaderMenu": {
+    "Home page": "Главная страница",
+    "Tour catalog": "Каталог туров",
+    "About Us": "О нас",
+    "Reviews": "Отзывы",
+    "Contacts": "Контакты"
   }
 }

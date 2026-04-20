@@ -5,5 +5,13 @@
 
   "EmptyData": {
     "title": "Magliwmat joq"
+  },
+
+  "HeaderMenu": {
+    "Home page": "Bas bet",
+    "Tour catalog": "Ekskursiya katalogı",
+    "About Us": "Biz haqqımızda",
+    "Reviews": "Pikirler",
+    "Contacts": "Kontaktlar"
   }
 }

@@ -3,22 +3,22 @@ import { appRoutes } from "@/shared/config/route";
 export const menuItems = [
   {
     path: appRoutes.home,
-    name: "Главная страница",
+    name: "Home page",
   },
   {
     path: appRoutes.catalog,
-    name: "Каталог туров",
+    name: "Tour catalog",
   },
   {
     path: appRoutes.about,
-    name: "О нас",
+    name: "About Us",
   },
   {
     path: appRoutes.review,
-    name: "Отзывы",
+    name: "Reviews",
   },
   {
     path: appRoutes.contact,
-    name: "Контакты",
+    name: "Contacts",
   },
 ];

@@ -5,5 +5,13 @@
 
   "EmptyData": {
     "title": "No data"
+  },
+
+  "HeaderMenu": {
+    "Home page": "Home page",
+    "Tour catalog": "Tour catalog",
+    "About Us": "About Us",
+    "Reviews": "Reviews",
+    "Contacts": "Contacts"
   }
 }
