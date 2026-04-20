@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import "../styles/globals.css";
+
 import { Header } from "@/widgets/Header";
 import { Footer } from "@/widgets/Footer";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import NextTopLoader from "nextjs-toploader";
+
+import "../styles/globals.css";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;  
+  params: Promise<{ locale: string }>;
 };
 
 export default async function RootLayout({ children, params }: Props) {
@@ -33,6 +36,11 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={nunito.variable} data-theme="cupcake">
       <body>
+        <NextTopLoader
+          color="#2be5eb"
+          height={4}
+          shadow="0 0 10px #11b2b8, 0 0 5px #031b1c"
+        />
         <NextIntlClientProvider>
           <div id="main">
             <Header />
