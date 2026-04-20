@@ -13,5 +13,9 @@
     "About Us": "О нас",
     "Reviews": "Отзывы",
     "Contacts": "Контакты"
+  },
+
+  "NotFoundPage": {
+    "Page not found": "Страница не найдена"
   }
 }

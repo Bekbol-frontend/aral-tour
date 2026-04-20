@@ -13,5 +13,9 @@
     "About Us": "About Us",
     "Reviews": "Reviews",
     "Contacts": "Contacts"
+  },
+
+  "NotFoundPage": {
+    "Page not found": "Page not found"
   }
 }

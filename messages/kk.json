@@ -13,5 +13,9 @@
     "About Us": "Biz haqqımızda",
     "Reviews": "Pikirler",
     "Contacts": "Kontaktlar"
+  },
+
+  "NotFoundPage": {
+    "Page not found": "Bet tabılmadı"
   }
 }

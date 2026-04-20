@@ -13,5 +13,9 @@
     "About Us": "Biz haqimizda",
     "Reviews": "Sharhlar",
     "Contacts": "Kontaktlar"
+  },
+
+  "NotFoundPage": {
+    "Page not found": "Sahifa topilmadi"
   }
 }
