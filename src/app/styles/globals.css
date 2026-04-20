@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-secondary-550: #010707;
+  --color-secondary-500: #010e0e;
+  --color-secondary-450: #021415;
+  --color-secondary-400: #031b1c;
+  --color-secondary-350: #032223;
+  --color-secondary-300: #042a2b;
+  --color-secondary-250: #0a6d71;
+  --color-secondary-200: #11b2b8;
+  --color-secondary-150: #2be5eb;
+  --color-secondary-100: #71eef2;
+  --color-secondary-50: #b8f6f8;
+
+  --color-primary-550: #322d03;
+  --color-primary-500: #655a06;
+  --color-primary-450: #97870a;
+  --color-primary-400: #c9b30d;
+  --color-primary-350: #f0d81b;
+  --color-primary-300: #f4e04d;
+  --color-primary-250: #f6e56b;
+  --color-primary-200: #f7eb89;
+  --color-primary-150: #f9f0a6;
+  --color-primary-100: #fbf5c4;
+  --color-primary-50: #fdfae1;
+
+  --color-base-black: #000;
+  --color-base-white: #fff;
+  --color-base-border: #f2f3f4;
+  --color-base-bg: #fcfcfc;
+
+  --color-base-black-neutral: rgba(0, 0, 0, 0.5);
+  --color-base-white-neutral: rgba(255, 255, 255, 0.5);
+
+  --color-gray-250: #3a4352;
+  --color-gray-200: #4a5568;
+  --color-gray-150: #687792;
+  --color-gray-100: #909cb0;
+  --color-gray-50: #bac1ce;
+
+  --color-light-gray-250: #e4e8ec;
+  --color-light-gray-200: #edf1f5;
+  --color-light-gray-150: #f2f6fa;
+  --color-light-gray-100: #f8f9fa;
+  --color-light-gray-50: #f7fafc;
+
+  /* font-size */
+  --text-heading-large: 34px;
+  --text-heading-medium: 30px;
+  --text-heading-small: 28px;
+
+  --text-title-large: 24px;
+  --text-title-medium: 22px;
+  --text-title-small: 18px;
+
+  --text-description-large: 17px;
+  --text-description-medium: 16px;
+  --text-description-small: 14px;
+
+  /* font-weight */
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /* line-height */
+  --leading-heading-large: 44px;
+  --leading-heading-medium: 40px;
+  --leading-heading-small: 36px;
+
+  --leading-title-large: 32px;
+  --leading-title-medium: 28px;
+  --leading-title-small: 24px;
+
+  --leading-description-large: 24px;
+  --leading-description-medium: 22px;
+  --leading-description-small: 20px;
+
+  /* spacing */
+  --spacing-5: 5px;
+  --spacing-10: 10px;
+  --spacing-15: 15px;
+  --spacing-20: 20px;
+  --spacing-30: 30px;
+  --spacing-40: 40px;
+  --spacing-50: 50px;
+  --spacing-60: 60px;
+
+  /* border-radius */
+  --radius-2: 2px;
+  --radius-6: 6px;
+  --radius-10: 10px;
+  --radius-15: 15px;
+}
+
+body {
+  font-family: var(--font-nunito);
+}
+
+#main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-block {
+  flex: 1;
+}
+
+.btn {
+  border-radius: var(--radius-6);
+}
