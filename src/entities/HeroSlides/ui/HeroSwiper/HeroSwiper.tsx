@@ -43,7 +43,7 @@ function HeroSwiper({ data }: IProps) {
       >
         {data.map((el) => (
           <SwiperSlide
-            className="text-center min-h-[65vh] md:min-h-[80vh] flex! flex-col items-center justify-center"
+            className="text-center min-h-[70vh] md:min-h-[80vh] flex! flex-col items-center justify-center"
             style={{
               backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${env.baseUrl}/${el.image_path})`,
               backgroundRepeat: "no-repeat",

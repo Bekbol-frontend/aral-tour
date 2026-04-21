@@ -97,6 +97,9 @@
   --radius-6: 6px;
   --radius-10: 10px;
   --radius-15: 15px;
+
+  /* z-index */
+  --z-index-1: 1;
 }
 
 body {
