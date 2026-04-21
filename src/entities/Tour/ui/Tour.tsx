@@ -1,12 +1,27 @@
-  import { MainTitle } from "@/shared/ui/MainTitle";
-  import { Section } from "@/shared/ui/Section";
+import { Container } from "@/shared/ui/Container";
+import { MainTitle } from "@/shared/ui/MainTitle";
+import { Section } from "@/shared/ui/Section";
+import { getTourTopRated } from "../model/services";
+import { EmptyData } from "@/shared/ui/EmptyData";
+import { TourCard } from "@/entities/TourCard";
 
-  function Tour() {
-    return (
-      <Section>
-        <MainTitle title="Popular tours" />
-      </Section>
-    );
-  }
+async function Tour() {
+  const res = await getTourTopRated();
 
-  export default Tour;
+  if (!res.data.data || !res.data.data.length) return <EmptyData />;
+
+  return (
+    <Section>
+      <MainTitle title="Popular tours" />
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {res.data.data.map((tour) => (
+            <TourCard key={tour.id} imgUrl={tour.main_image} />
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
+export default Tour;

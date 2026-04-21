@@ -3,6 +3,14 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "toqtarbay.dbc.uz",
+      },
+    ],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();

@@ -94,6 +94,8 @@
 
   /* border-radius */
   --radius-2: 2px;
+  --radius-3: 3px;
+  --radius-4: 4px;
   --radius-6: 6px;
   --radius-10: 10px;
   --radius-15: 15px;
