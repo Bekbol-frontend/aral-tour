@@ -17,5 +17,13 @@
 
   "MainTitle": {
     "Popular tours": "Популярные туры"
+  },
+
+  "TourCard": {
+    "day": "дня",
+    "night": "ночь",
+    "views": "просмотры",
+    "Book": "Забронировать",
+    "from": "от"
   }
 }

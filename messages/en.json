@@ -17,5 +17,13 @@
 
   "MainTitle": {
     "Popular tours": "Popular tours"
+  },
+
+  "TourCard": {
+    "day": "day",
+    "night": "night",
+    "views": "views",
+    "Book": "Book",
+    "from": "from"
   }
 }

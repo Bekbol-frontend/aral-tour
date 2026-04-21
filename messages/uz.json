@@ -17,5 +17,13 @@
 
   "MainTitle": {
     "Popular tours": "Mashhur sayohatlar"
+  },
+
+  "TourCard": {
+    "day": "kun",
+    "night": "tun",
+    "views": "qarashlar",
+    "Book": "Bandlash",
+    "from": "dan"
   }
 }

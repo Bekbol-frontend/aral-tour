@@ -17,5 +17,13 @@
 
   "MainTitle": {
     "Popular tours": "Belgili turlar"
+  },
+
+  "TourCard": {
+    "day": "kún",
+    "night": "tún",
+    "views": "kórinisler",
+    "Book": "Bronlaw",
+    "from": "baslap"
   }
 }

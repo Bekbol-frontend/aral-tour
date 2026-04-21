@@ -24,6 +24,8 @@ async function Tour() {
               duration_nights={tour.duration_nights}
               rating={tour.rating}
               reviews_count={tour.reviews_count}
+              slogan={tour.slogan}
+              price={tour.price}
             />
           ))}
         </div>
