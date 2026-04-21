@@ -11,10 +11,15 @@ function Rating({ value, className = "" }: IProps) {
       {Array(5)
         .fill("")
         .map((_, index) => {
+          const rating = Math.floor(value);
+          const active = index + 1 <= rating;
+
           return (
             <span
               key={index}
-              className="bg-secondary-150 inline-flex w-[24] h-[24] cursor-pointer"
+              className={clsx(["bg-base-border inline-flex w-[24] h-[24]"], {
+                " bg-secondary-150 ": active,
+              })}
               style={{
                 clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
               }}
