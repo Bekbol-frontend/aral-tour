@@ -16,7 +16,15 @@ async function Tour() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {res.data.data.map((tour) => (
-            <TourCard key={tour.id} imgUrl={tour.main_image} />
+            <TourCard
+              key={tour.id}
+              imgUrl={tour.main_image}
+              title={tour.title}
+              duration_days={tour.duration_days}
+              duration_nights={tour.duration_nights}
+              rating={tour.rating}
+              reviews_count={tour.reviews_count}
+            />
           ))}
         </div>
       </Container>
