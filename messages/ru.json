@@ -13,5 +13,9 @@
 
   "NotFoundPage": {
     "Page not found": "Страница не найдена"
+  },
+
+  "MainTitle": {
+    "Popular tours": "Популярные туры"
   }
 }

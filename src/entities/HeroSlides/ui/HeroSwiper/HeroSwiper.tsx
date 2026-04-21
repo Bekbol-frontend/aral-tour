@@ -49,6 +49,7 @@ function HeroSwiper({ data }: IProps) {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              backgroundAttachment: "fixed",
             }}
           >
             <div className="max-w-[700] mx-auto px-50 py-20 md:px-30">

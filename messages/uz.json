@@ -13,5 +13,9 @@
 
   "NotFoundPage": {
     "Page not found": "Sahifa topilmadi"
+  },
+
+  "MainTitle": {
+    "Popular tours": "Mashhur sayohatlar"
   }
 }
