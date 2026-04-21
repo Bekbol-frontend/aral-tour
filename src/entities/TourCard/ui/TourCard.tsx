@@ -82,7 +82,7 @@ async function TourCard(props: IProps) {
           {slogan}
         </Description>
 
-        <Title variyant="medium" className="mb-15">
+        <Title className="mb-15 font-extra-bold!">
           {t("from")} {price} $
         </Title>
 
