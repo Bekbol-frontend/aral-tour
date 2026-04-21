@@ -17,9 +17,12 @@ function Rating({ value, className = "" }: IProps) {
           return (
             <span
               key={index}
-              className={clsx(["bg-base-border inline-flex w-[24] h-[24]"], {
-                " bg-secondary-150 ": active,
-              })}
+              className={clsx(
+                ["bg-base-border inline-flex w-[24] h-[24] shadow"],
+                {
+                  " bg-secondary-150 ": active,
+                },
+              )}
               style={{
                 clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
               }}

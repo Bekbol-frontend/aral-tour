@@ -22,7 +22,7 @@
   "TourCard": {
     "day": "day",
     "night": "night",
-    "views": "views",
+    "reviews": "reviews",
     "Book": "Book",
     "from": "from"
   }

@@ -1,10 +1,12 @@
 import { env } from "@/shared/config/env";
+import { appRoutes } from "@/shared/config/route";
 import { Description } from "@/shared/ui/Description";
 import { Rating } from "@/shared/ui/Rating";
 import { Title } from "@/shared/ui/Title";
-import { Eye } from "lucide-react";
+import { ChevronRight, Eye } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import Link from "next/link";
 
 interface IProps {
   imgUrl: string;
@@ -15,6 +17,7 @@ interface IProps {
   reviews_count: number;
   slogan: string;
   price: number;
+  phone: string;
 }
 
 async function TourCard(props: IProps) {
@@ -29,11 +32,12 @@ async function TourCard(props: IProps) {
     reviews_count,
     slogan,
     price,
+    phone,
   } = props;
 
   return (
     <div className="border-[1] border-base-border rounded-15 p-5">
-      <div className="h-[280] md:h-[380] rounded-10 overflow-hidden">
+      <div className="h-[280] md:h-[280] rounded-10 overflow-hidden">
         <Image
           src={`${env.baseUrl}${imgUrl}`}
           alt={title}
@@ -49,7 +53,8 @@ async function TourCard(props: IProps) {
         >
           {title}
         </Title>
-        <div className="bg-light-gray-200 my-10 md:my-20 inline-flex py-5 px-20 rounded-6">
+
+        <div className="bg-light-gray-200 my-15 md:my-20 inline-flex py-5 px-20 rounded-6">
           <Description variyant="medium">
             {duration_days} {t("day")}{" "}
             {duration_nights > 0 ? (
@@ -60,7 +65,7 @@ async function TourCard(props: IProps) {
           </Description>
         </div>
 
-        <div className="flex gap-20 items-center mb-15 md:mb-20">
+        <div className="flex gap-10 items-center mb-15 md:mb-20 border-b-[1] border-light-gray-250 py-10">
           <div className="w-[40] h-[40] inline-flex items-center justify-center rounded-full bg-primary-300 text-secondary-300 shadow">
             <Description variyant="large">{rating}</Description>
           </div>
@@ -68,7 +73,7 @@ async function TourCard(props: IProps) {
             <Rating value={rating} className="mb-5" />
             <Description variyant="medium" className="flex items-center gap-5">
               <Eye size={20} strokeWidth={2} /> {`(${reviews_count})`}{" "}
-              {t("views")}
+              {t("reviews")}
             </Description>
           </div>
         </div>
@@ -77,9 +82,26 @@ async function TourCard(props: IProps) {
           {slogan}
         </Description>
 
-        <Title variyant="medium">
+        <Title variyant="medium" className="mb-15">
           {t("from")} {price} $
         </Title>
+
+        <div className="flex items-center justify-between gap-10">
+          <div className="flex gap-10">
+            <button className="btn bg-primary-300 text-secondary-300">
+              {t("Book")}
+            </button>
+            <a href={`tel:${phone}`} className="btn">
+              {phone}
+            </a>
+          </div>
+          <Link
+            href={appRoutes.home}
+            className="btn bg-secondary-300 text-primary-300 p-10"
+          >
+            <ChevronRight />
+          </Link>
+        </div>
       </div>
     </div>
   );
