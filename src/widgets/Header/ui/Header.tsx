@@ -17,7 +17,7 @@ function Header() {
               <HeaderMenu />
             </div>
 
-            <div className="flex items-center gap-15">
+            <div className="flex items-center gap-10 md:gap-15">
               <div className="hidden md:block">
                 <SwitchLang />
               </div>
