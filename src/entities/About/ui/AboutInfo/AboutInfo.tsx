@@ -16,7 +16,7 @@ function AboutInfo(props: IProps) {
 
   return (
     <Section
-      className="my-40 md:my-60 min-h-[70vh] md:min-h-[80vh] relative p-0!"
+      className="my-40 md:my-60 min-h-[80vh] relative p-0!"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 95%), url('${env.baseUrl}${images[0].image_path}')`,
         backgroundRepeat: "no-repeat",
