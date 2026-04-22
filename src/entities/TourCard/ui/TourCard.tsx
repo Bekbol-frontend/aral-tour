@@ -91,7 +91,10 @@ async function TourCard(props: IProps) {
             <button className="btn bg-primary-300 text-secondary-300 flex-1 md:flex-0">
               {t("Book")}
             </button>
-            <a href={`tel:${phone}`} className="btn flex-1 md:flex-0">
+            <a
+              href={`tel:${phone}`}
+              className="btn flex-[1.2] md:flex-0 text-description-small"
+            >
               {phone}
             </a>
           </div>

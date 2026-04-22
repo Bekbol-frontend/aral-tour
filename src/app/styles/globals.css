@@ -1,3 +1,4 @@
+@import "./reset/reset.css";
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -108,6 +109,8 @@
   --z-index-header: 5;
 }
 
+/* ================= BODY ================= */
+
 body {
   font-family: var(--font-nunito);
   background-color: #fcfcfc;
@@ -121,13 +124,4 @@ body {
 
 #main-block {
   flex: 1;
-}
-
-.btn {
-  border-radius: var(--radius-6);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
