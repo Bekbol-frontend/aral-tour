@@ -2,7 +2,6 @@
 
 import { env } from "@/shared/config/env";
 import Image from "next/image";
-import { useCallback } from "react";
 
 interface IProps {
   imgUrl: string;
@@ -17,10 +16,10 @@ function AwardImage({ imgUrl, openModal }: IProps) {
         onClick={() => openModal(imgUrl)}
       >
         <Image
-          width={400}
-          height={400}
           src={`${env.baseUrl}${imgUrl}`}
           alt="Award-image"
+          width={400}
+          height={400}
           className="w-full h-auto object-contain group-hover:scale-[.95] transition-all duration-500"
         />
       </div>

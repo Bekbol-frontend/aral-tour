@@ -1,14 +1,15 @@
 import { clsx } from "@/shared/lib/clsx";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 interface IProps {
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
 }
 
-function Section({ children, className = "" }: IProps) {
+function Section({ children, className = "", style }: IProps) {
   return (
-    <section className={clsx(["py-[40] md:py-[60]", className])}>
+    <section style={style} className={clsx(["py-[40] md:py-[60]", className])}>
       {children}
     </section>
   );
