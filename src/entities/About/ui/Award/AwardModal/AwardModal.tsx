@@ -11,7 +11,7 @@ function AwardModal({ open, onClose, imgUrl }: IProps) {
   return (
     <dialog id="my_modal_1" className="modal" open={open} onClick={onClose}>
       <div
-        className="modal-box max-w-[1000] h-[700] border-4"
+        className="modal-box max-w-[1000] h-auto md:h-[700]"
         onClick={(e) => e.stopPropagation()}
       >
         <button

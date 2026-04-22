@@ -43,10 +43,10 @@ async function TourCard(props: IProps) {
           alt={title}
           width={470}
           height={470}
-          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+          className="w-full h-full! object-cover group-hover:scale-110 transition-all duration-500"
         />
       </div>
-      <div className="py-20 px-15">
+      <div className="p-10 md:py-20 md:px-15">
         <Title
           variyant="small"
           className="overflow-hidden line-clamp-1 webkit-line-clamp-1 text-ellipsis"
@@ -87,11 +87,11 @@ async function TourCard(props: IProps) {
         </Title>
 
         <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
-          <div className="flex gap-10">
-            <button className="btn bg-primary-300 text-secondary-300">
+          <div className="flex flex-1 w-full gap-5 md:gap-10">
+            <button className="btn bg-primary-300 text-secondary-300 flex-1 md:flex-0">
               {t("Book")}
             </button>
-            <a href={`tel:${phone}`} className="btn">
+            <a href={`tel:${phone}`} className="btn flex-1 md:flex-0">
               {phone}
             </a>
           </div>
