@@ -86,7 +86,7 @@ async function TourCard(props: IProps) {
           {t("from")} {price} $
         </Title>
 
-        <div className="flex items-center justify-between gap-10">
+        <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
           <div className="flex gap-10">
             <button className="btn bg-primary-300 text-secondary-300">
               {t("Book")}
@@ -97,9 +97,12 @@ async function TourCard(props: IProps) {
           </div>
           <Link
             href={appRoutes.home}
-            className="btn bg-secondary-300 text-primary-300 p-10"
+            className="btn bg-secondary-300 text-primary-300 p-10 w-full md:w-auto flex md:inline-flex"
           >
-            <ChevronRight />
+            <Description className="block md:hidden">
+              {t("Show more")}
+            </Description>
+            <ChevronRight className="hidden md:inline-flex" />
           </Link>
         </div>
       </div>
