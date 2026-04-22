@@ -16,7 +16,8 @@
   },
 
   "MainTitle": {
-    "Popular tours": "Популярные туры"
+    "Popular tours": "Популярные туры",
+    "About": "О нас"
   },
 
   "TourCard": {
@@ -26,5 +27,9 @@
     "Book": "Забронировать",
     "from": "от",
     "Show more": "Показать больше"
+  },
+
+  "About": {
+    "Award": "Награда"
   }
 }

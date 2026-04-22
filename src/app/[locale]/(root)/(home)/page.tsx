@@ -1,3 +1,4 @@
+import { About } from "@/entities/About";
 import { HeroSlides } from "@/entities/HeroSlides";
 import { Tour } from "@/entities/Tour";
 
@@ -6,6 +7,7 @@ async function HomePage() {
     <>
       <HeroSlides />
       <Tour />
+      <About />
     </>
   );
 }

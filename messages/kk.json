@@ -16,7 +16,8 @@
   },
 
   "MainTitle": {
-    "Popular tours": "Belgili turlar"
+    "Popular tours": "Belgili turlar",
+    "About": "Biz haqqımızda"
   },
 
   "TourCard": {
@@ -26,5 +27,9 @@
     "Book": "Bronlaw",
     "from": "baslap",
     "Show more": "Tolıq"
+  },
+
+  "About": {
+    "Award": "Sıylıqlar"
   }
 }

@@ -16,7 +16,8 @@
   },
 
   "MainTitle": {
-    "Popular tours": "Popular tours"
+    "Popular tours": "Popular tours",
+    "About": "About"
   },
 
   "TourCard": {
@@ -26,5 +27,9 @@
     "Book": "Book",
     "from": "from",
     "Show more": "Show more"
+  },
+
+  "About": {
+    "Award": "Award"
   }
 }

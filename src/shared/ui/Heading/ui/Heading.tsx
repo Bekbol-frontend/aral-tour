@@ -15,7 +15,7 @@ function Heading(props: IProps) {
     return (
       <h1
         className={clsx([
-          "text-title-large leading-title-large md:leading-heading-large  md:text-heading-large font-semibold",
+          "text-title-large leading-title-large md:leading-heading-large  md:text-heading-large font-bold",
           className,
         ])}
       >
@@ -28,7 +28,7 @@ function Heading(props: IProps) {
     return (
       <h2
         className={clsx([
-          "text-title-medium leading-title-medium md:leading-heading-medium md:text-heading-medium font-semibold",
+          "text-title-medium leading-title-medium md:leading-heading-medium md:text-heading-medium font-bold",
           className,
         ])}
       >

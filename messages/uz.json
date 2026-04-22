@@ -16,7 +16,8 @@
   },
 
   "MainTitle": {
-    "Popular tours": "Mashhur sayohatlar"
+    "Popular tours": "Mashhur sayohatlar",
+    "About": "Biz haqimizda"
   },
 
   "TourCard": {
@@ -26,5 +27,9 @@
     "Book": "Bandlash",
     "from": "dan",
     "Show more": "Batafsil"
+  },
+
+  "About": {
+    "Award": "Mukofotlar"
   }
 }
