@@ -26,6 +26,7 @@ function AwardModal({ open, onClose, imgUrl }: IProps) {
           height={500}
           alt="dsa"
           className="w-full h-auto rounded-10"
+          priority
         />
       </div>
     </dialog>
