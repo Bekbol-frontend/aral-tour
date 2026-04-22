@@ -93,7 +93,7 @@ async function TourCard(props: IProps) {
             </button>
             <a
               href={`tel:${phone}`}
-              className="btn flex-[1.2] md:flex-0 text-description-small"
+              className="btn flex-[1.2] whitespace-nowrap md:flex-0 text-description-small"
             >
               {phone}
             </a>
