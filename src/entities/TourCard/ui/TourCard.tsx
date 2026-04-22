@@ -36,14 +36,14 @@ async function TourCard(props: IProps) {
   } = props;
 
   return (
-    <div className="border-[1] border-base-border rounded-15 p-5">
+    <div className="border-[1] border-light-gray-250 rounded-15 p-5 group">
       <div className="h-[280] md:h-[280] rounded-10 overflow-hidden">
         <Image
           src={`${env.baseUrl}${imgUrl}`}
           alt={title}
           width={470}
           height={470}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
         />
       </div>
       <div className="py-20 px-15">

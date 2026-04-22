@@ -11,7 +11,7 @@ async function Tour() {
   if (!res.data.data || !res.data.data.length) return <EmptyData />;
 
   return (
-    <Section>
+    <Section className="bg-white">
       <MainTitle title="Popular tours" />
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
