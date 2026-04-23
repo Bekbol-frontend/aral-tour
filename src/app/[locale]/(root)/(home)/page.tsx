@@ -1,5 +1,6 @@
 import { About } from "@/entities/About";
 import { HeroSlides } from "@/entities/HeroSlides";
+import { Review } from "@/entities/Review";
 import { Tour } from "@/entities/Tour";
 
 async function HomePage() {
@@ -8,6 +9,7 @@ async function HomePage() {
       <HeroSlides />
       <Tour />
       <About />
+      <Review />
     </>
   );
 }
