@@ -2,7 +2,6 @@ import { Section } from "@/shared/ui/Section";
 import { IAboutDataImages } from "../../model/types";
 import { env } from "@/shared/config/env";
 import { Heading } from "@/shared/ui/Heading";
-import { Description } from "@/shared/ui/Description";
 import { Title } from "@/shared/ui/Title";
 
 interface IProps {

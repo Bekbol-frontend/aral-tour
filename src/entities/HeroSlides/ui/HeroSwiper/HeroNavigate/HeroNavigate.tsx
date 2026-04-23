@@ -9,21 +9,6 @@ interface IProps {
 function HeroNavigate({ prevRef, nextRef }: IProps) {
   return (
     <>
-      {/* <div className="flex items-center gap-15 md:hidden absolute bottom-20 right-20 z-1">
-        <button
-          ref={prevRef}
-          className="btn p-1 w-[40] h-[40] bg-primary-300 text-secondary-300 border-none shadow-secondary-300"
-        >
-          <ChevronLeft size={25} />
-        </button>
-        <button
-          ref={nextRef}
-          className="btn p-1 w-[40] h-[40] bg-primary-300 text-secondary-300 border-none shadow-secondary-300"
-        >
-          <ChevronRight size={25} />
-        </button>
-      </div> */}
-
       <div className="flex gap-10 justify-between absolute z-4 inset-auto bottom-20 right-20 md:inset-0">
         <button
           ref={prevRef}

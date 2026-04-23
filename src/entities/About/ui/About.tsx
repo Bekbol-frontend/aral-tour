@@ -5,6 +5,7 @@ import { EmptyData } from "@/shared/ui/EmptyData";
 import Award from "./Award/Award";
 import { Container } from "@/shared/ui/Container";
 import AboutInfo from "./AboutInfo/AboutInfo";
+import AboutSwiper from "./AboutSwiper/AboutSwiper";
 
 async function About() {
   const res = await getAbout();
@@ -22,6 +23,9 @@ async function About() {
         <Award data={res.data.data.award} />
       </Container>
       <AboutInfo title={title} description={description} images={images} />
+      <Container>
+        <AboutSwiper data={images} />
+      </Container>
     </Section>
   );
 }
