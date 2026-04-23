@@ -15,6 +15,7 @@ import { Description } from "@/shared/ui/Description";
 import { Title } from "@/shared/ui/Title";
 import { Rating } from "@/shared/ui/Rating";
 import { Play } from "lucide-react";
+import ReviewSwiperNavigate from "./ReviewSwiperNavigate/ReviewSwiperNavigate";
 
 interface IProps {
   data: IReview[];
@@ -44,9 +45,9 @@ function ReviewSwiper({ data }: IProps) {
             slidesPerView: 2.3,
           },
         }}
-        className="py-20"
+        className="pb-20!"
       >
-        {[...data, ...data].map((el) => (
+        {data.map((el) => (
           <SwiperSlide key={el.id}>
             <div className="h-full! border-[1] border-light-gray-250 rounded-6 p-20 relative overflow-hidden">
               <span className="shadow inline-flex items-center justify-center bg-secondary-250 text-primary-300 absolute top-0 right-0 rounded-bl-6 py-15 px-20 cursor-pointer">
@@ -76,6 +77,8 @@ function ReviewSwiper({ data }: IProps) {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <ReviewSwiperNavigate prevRef={prevRef} nextRef={nextRef} />
     </div>
   );
 }
