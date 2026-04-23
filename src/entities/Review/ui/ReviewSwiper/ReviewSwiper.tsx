@@ -67,7 +67,7 @@ function ReviewSwiper({ data }: IProps) {
                 </Title>
               </div>
               <div>
-                <span className="bg-secondary-50 py-5 px-10 rounded-6 text-description-large font-semibold mb-20 inline-flex">
+                <span className="bg-secondary-50 py-5 px-10 rounded-6 text-description-small md:text-description-large font-semibold mb-20 inline-flex">
                   {el.tour.title}
                 </span>
                 <Description variyant="medium">{el.comment}</Description>
