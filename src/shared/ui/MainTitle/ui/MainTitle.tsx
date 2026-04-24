@@ -5,9 +5,14 @@ import { getTranslations } from "next-intl/server";
 interface IProps {
   title: string;
   className?: string;
+  noTranslate?: boolean;
 }
 
-async function MainTitle({ title, className = "" }: IProps) {
+async function MainTitle({
+  title,
+  className = "",
+  noTranslate = false,
+}: IProps) {
   const t = await getTranslations("MainTitle");
 
   return (
@@ -24,7 +29,7 @@ async function MainTitle({ title, className = "" }: IProps) {
         variyant="medium"
         className="text-secondary-300 text-center min-w-[200] max-w-[350] w-full"
       >
-        {t(title)}
+        {noTranslate ? title : t(title)}
       </Heading>
       <span
         className={`bg-[url('/naqsh/border2.svg')] bg-cover bg-no-repeat bg-center flex w-full h-[36] md:h-[70]`}
