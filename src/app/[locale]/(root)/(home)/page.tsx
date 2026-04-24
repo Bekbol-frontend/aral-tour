@@ -1,4 +1,5 @@
 import { About } from "@/entities/About";
+import { Contact } from "@/entities/Contact";
 import { FAQ } from "@/entities/FAQ";
 import { HeroSlides } from "@/entities/HeroSlides";
 import { Review } from "@/entities/Review";
@@ -12,6 +13,7 @@ async function HomePage() {
       <About />
       <Review />
       <FAQ />
+      <Contact />
     </>
   );
 }
