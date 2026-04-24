@@ -21,7 +21,7 @@ async function MainTitle({ title, className = "" }: IProps) {
         className={`bg-[url('/naqsh/border1.svg')] bg-cover bg-no-repeat bg-center flex w-full h-[36] md:h-[70]`}
       />
       <Heading
-        variyant="small"
+        variyant="medium"
         className="text-secondary-300 text-center min-w-[200] max-w-[350] w-full"
       >
         {t(title)}
