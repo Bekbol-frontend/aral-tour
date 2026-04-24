@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 const ITEM_CLASS =
-  "flex items-center gap-10 relative border-b border-light-gray-250 pb-20 last:border-0";
+  "flex items-center gap-15 relative border-b md:border-none border-light-gray-250 pb-20 last:border-0";
 const CLASS_ICON_SPAN =
   "inline-flex items-center justify-center rounded-full shadow w-[43] h-[43] min-w-[43] min-h-[43]";
 
@@ -83,11 +83,7 @@ function ContactData({ data }: IProps) {
           <FaTelegram size={20} />
         </span>
         <Description variyant="medium">{telegram_username}</Description>
-        <a
-          href={`https://t.me/${telegram_url}`}
-          target="_blank"
-          className={`absolute inset-0`}
-        />
+        <a href={telegram_url} target="_blank" className={`absolute inset-0`} />
       </div>
 
       <div className={ITEM_CLASS}>
