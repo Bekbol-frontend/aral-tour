@@ -32,5 +32,10 @@
 
   "About": {
     "Award": "Award"
+  },
+
+  "ExpandableText": {
+    "Show less": "Show less",
+    "Show more": "Show more"
   }
 }

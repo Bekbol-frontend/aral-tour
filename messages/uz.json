@@ -32,5 +32,10 @@
 
   "About": {
     "Award": "Mukofotlar"
+  },
+
+  "ExpandableText": {
+    "Show less": "Yopish",
+    "Show more": "Davomini o‘qish"
   }
 }

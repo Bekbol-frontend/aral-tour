@@ -32,5 +32,10 @@
 
   "About": {
     "Award": "Sıylıqlar"
+  },
+
+  "ExpandableText": {
+    "Show less": "Jasıriw",
+    "Show more": "Dawamın oqıw"
   }
 }

@@ -18,6 +18,7 @@ import { Play } from "lucide-react";
 import ReviewSwiperNavigate from "./ReviewSwiperNavigate/ReviewSwiperNavigate";
 import { Modal } from "@/shared/ui/Modal";
 import { YoutubePlayer } from "@/shared/ui/YoutubePlayer";
+import ExpandableText from "@/shared/ui/ExpandableText/ui/ExpandableText";
 
 interface IProps {
   data: IReview[];
@@ -88,7 +89,9 @@ function ReviewSwiper({ data }: IProps) {
                   <span className="bg-secondary-50 py-5 px-10 rounded-6 text-description-small md:text-description-large font-semibold mb-20 inline-flex">
                     {el.tour.title}
                   </span>
-                  <Description variyant="medium">{el.comment}</Description>
+                  <Description variyant="medium">
+                    <ExpandableText text={el.comment} />
+                  </Description>
                 </div>
               </div>
             </SwiperSlide>

@@ -32,5 +32,10 @@
 
   "About": {
     "Award": "Награда"
+  },
+
+  "ExpandableText": {
+    "Show less": "Скрыть",
+    "Show more": "Читать далее"
   }
 }
