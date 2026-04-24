@@ -9,7 +9,7 @@ interface IProps {
 
 function Section({ children, className = "", style }: IProps) {
   return (
-    <section style={style} className={clsx(["py-[40] md:py-[60]", className])}>
+    <section style={style} className={clsx(["py-[35] md:py-[60]", className])}>
       {children}
     </section>
   );

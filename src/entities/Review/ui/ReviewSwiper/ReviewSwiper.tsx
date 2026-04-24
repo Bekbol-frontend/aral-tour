@@ -43,7 +43,7 @@ function ReviewSwiper({ data }: IProps) {
 
   return (
     <>
-      <div className="relative pb-60">
+      <div className="relative">
         <Swiper
           spaceBetween={10}
           navigation={{
