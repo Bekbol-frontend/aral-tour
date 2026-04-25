@@ -11,7 +11,7 @@ import {
 import ContactMap from "../ContactMap/ContactMap";
 
 const ITEM_CLASS =
-  "flex items-center gap-15 relative border-b md:border-none border-light-gray-250 pb-20 last:border-0";
+  "flex self-start flex-row text-left md:text-center md:flex-col items-center justify-start md:justify-center gap-15 relative border-b md:border-none border-light-gray-250 pb-20 last:border-0";
 const CLASS_ICON_SPAN =
   "inline-flex items-center justify-center rounded-full shadow w-[43] h-[43] min-w-[43] min-h-[43]";
 
