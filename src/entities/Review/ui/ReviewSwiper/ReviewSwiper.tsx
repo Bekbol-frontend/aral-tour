@@ -34,6 +34,7 @@ function ReviewSwiper({ data }: IProps) {
 
   const onClose = useCallback(() => {
     setModal(false);
+    setUrlYoutube("");
   }, []);
 
   const onShowModal = useCallback((url: string) => {
