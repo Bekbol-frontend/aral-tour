@@ -9,6 +9,8 @@ import { notFound } from "next/navigation";
 import NextTopLoader from "nextjs-toploader";
 
 import "../styles/globals.css";
+import { ContactProvider } from "../provider/ContactProvider";
+import { getContact } from "@/shared/lib/api/get-contact";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -28,6 +30,7 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
+  const contactResponse = await getContact();
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -42,11 +45,13 @@ export default async function RootLayout({ children, params }: Props) {
           shadow="0 0 10px #11b2b8, 0 0 5px #031b1c"
         />
         <NextIntlClientProvider>
-          <div id="main">
-            <Header />
-            <main id="main-block">{children}</main>
-            <Footer />
-          </div>
+          <ContactProvider data={contactResponse.data.data}>
+            <div id="main">
+              <Header />
+              <main id="main-block">{children}</main>
+              <Footer />
+            </div>
+          </ContactProvider>
         </NextIntlClientProvider>
       </body>
     </html>

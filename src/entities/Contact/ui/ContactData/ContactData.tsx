@@ -1,4 +1,5 @@
-import { IContact } from "@/shared/types/contact";
+"use client";
+
 import { Description } from "@/shared/ui/Description";
 import {
   FaWhatsapp,
@@ -9,17 +10,14 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import ContactMap from "../ContactMap/ContactMap";
+import { useContextContact } from "@/app/provider/ContactProvider";
 
 const ITEM_CLASS =
   "flex self-start flex-1 w-[full] flex-row text-left md:text-center md:flex-col items-center justify-start md:justify-center gap-15 relative border-b md:border-none border-light-gray-250 pb-20  md:hover:bg-light-gray-150 last:border-0";
 const CLASS_ICON_SPAN =
   "inline-flex items-center justify-center rounded-full shadow w-[43] h-[43] min-w-[43] min-h-[43]";
 
-interface IProps {
-  data: IContact;
-}
-
-function ContactData({ data }: IProps) {
+function ContactData() {
   const {
     address,
     whatsapp_phone,
@@ -30,7 +28,7 @@ function ContactData({ data }: IProps) {
     telegram_username,
     facebook_url,
     facebook_name,
-  } = data;
+  } = useContextContact();
 
   return (
     <>

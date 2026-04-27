@@ -1,16 +1,12 @@
-import { getContact } from "@/shared/lib/api/get-contact";
+"use client";
+
+import { useContextContact } from "@/app/provider/ContactProvider";
 import { Description } from "@/shared/ui/Description";
-import { EmptyData } from "@/shared/ui/EmptyData";
 import { MapPin, Phone, Send } from "lucide-react";
 
-async function HeaderContact() {
-  const res = await getContact();
-
-  if (!res.data.data) {
-    return <EmptyData />;
-  }
-
-  const { address, phone, telegram_url, telegram_username } = res.data.data;
+function HeaderContact() {
+  const { address, phone, telegram_url, telegram_username } =
+    useContextContact();
 
   return (
     <div className="mt-20 py-20 flex flex-col gap-20">
