@@ -39,5 +39,10 @@
   "ExpandableText": {
     "Show less": "Yopish",
     "Show more": "Davomini o‘qish"
+  },
+
+  "Loading": {
+    "Aralsea Tour": "Orolbo‘yi sayohati",
+    "Exploring The Aral Sea": "Orol dengizi bo‘ylab sayohat"
   }
 }

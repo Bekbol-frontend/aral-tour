@@ -39,5 +39,10 @@
   "ExpandableText": {
     "Show less": "Скрыть",
     "Show more": "Читать далее"
+  },
+
+  "Loading": {
+    "Aralsea Tour": "Тур по Аральскому морю",
+    "Exploring The Aral Sea": "Исследование Аральского моря"
   }
 }

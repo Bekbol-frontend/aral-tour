@@ -39,5 +39,10 @@
   "ExpandableText": {
     "Show less": "Show less",
     "Show more": "Show more"
+  },
+
+  "Loading": {
+    "Aralsea Tour": "Aralsea Tour",
+    "Exploring The Aral Sea": "Exploring The Aral Sea"
   }
 }
