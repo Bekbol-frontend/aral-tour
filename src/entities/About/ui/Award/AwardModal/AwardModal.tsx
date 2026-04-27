@@ -14,14 +14,16 @@ function AwardModal({ open, onClose, imgUrl }: IProps) {
       open={open}
       onClose={onClose}
     >
-      <Image
-        src={imgUrl}
-        width={500}
-        height={500}
-        alt="dsa"
-        className="w-full h-auto rounded-10"
-        priority
-      />
+      {imgUrl && (
+        <Image
+          src={imgUrl}
+          width={500}
+          height={500}
+          alt="Award-image"
+          className="w-full h-auto rounded-10"
+          priority
+        />
+      )}
     </Modal>
   );
 }

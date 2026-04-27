@@ -1,12 +1,19 @@
+"use client";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 interface IProps {
   children: React.ReactNode;
 }
 
-const Portal = ({ children }: IProps) => {
-  const mount = document.body;
-  return createPortal(children, mount);
-};
+export default function Portal({ children }: IProps) {
+  const [mounted, setMounted] = useState(false);
 
-export default Portal;
+  useEffect(() => {
+    setMounted(true);
+
+    return () => setMounted(false);
+  }, []);
+
+  return mounted ? createPortal(children, document.body) : null;
+}

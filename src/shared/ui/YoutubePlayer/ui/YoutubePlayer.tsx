@@ -1,4 +1,7 @@
+"use client";
+
 import { getYoutubeEmbedUrl } from "@/shared/lib/getYoutubeEmbedUrl";
+import { EmptyData } from "../../EmptyData";
 
 interface IProps {
   url: string;
@@ -7,6 +10,10 @@ interface IProps {
 
 function YoutubePlayer({ url, className = "" }: IProps) {
   const embedUrl = getYoutubeEmbedUrl(url);
+
+  if (!embedUrl) {
+    return <EmptyData />;
+  }
 
   return (
     <iframe

@@ -1,9 +1,11 @@
-import { DatabaseSearch } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import { Title } from "../../Title";
+"use client";
 
-async function EmptyData() {
-  const t = await getTranslations("EmptyData");
+import { DatabaseSearch } from "lucide-react";
+import { Title } from "../../Title";
+import { useTranslations } from "next-intl";
+
+function EmptyData() {
+  const t = useTranslations("EmptyData");
 
   return (
     <div className="flex items-center flex-col gap-10 justify-center p-30 md:p-40">
