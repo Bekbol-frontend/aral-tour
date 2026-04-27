@@ -9,7 +9,6 @@ import {
   FaTelegram,
   FaFacebook,
 } from "react-icons/fa";
-import ContactMap from "../ContactMap/ContactMap";
 import { useContextContact } from "@/app/provider/ContactProvider";
 
 const ITEM_CLASS =
@@ -104,8 +103,6 @@ function ContactData() {
           />
         </div>
       </div>
-
-      <ContactMap />
     </>
   );
 }
