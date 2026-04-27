@@ -44,5 +44,11 @@
   "Loading": {
     "Aralsea Tour": "Orolbo‘yi sayohati",
     "Exploring The Aral Sea": "Orol dengizi bo‘ylab sayohat"
+  },
+
+  "NetworkStatus": {
+    "No Internet": "Internet yo‘q",
+    "Network disconnected. The page will continue to run once the connection is restored is": "Tarmoq uzilgan. Ulanish tiklangandan so‘ng sahifa ishlashda davom etadi",
+    "Retry": "Qayta urinish"
   }
 }

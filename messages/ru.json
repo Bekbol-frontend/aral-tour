@@ -44,5 +44,11 @@
   "Loading": {
     "Aralsea Tour": "Тур по Аральскому морю",
     "Exploring The Aral Sea": "Исследование Аральского моря"
+  },
+
+  "NetworkStatus": {
+    "No Internet": "Нет интернета",
+    "Network disconnected. The page will continue to run once the connection is restored is": "Сеть отключена. Страница продолжит работать после восстановления соединения",
+    "Retry": "Повторить попытку"
   }
 }

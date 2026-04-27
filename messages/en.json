@@ -44,5 +44,11 @@
   "Loading": {
     "Aralsea Tour": "Aralsea Tour",
     "Exploring The Aral Sea": "Exploring The Aral Sea"
+  },
+
+  "NetworkStatus": {
+    "No Internet": "No Internet",
+    "Network disconnected. The page will continue to run once the connection is restored is": "Network disconnected. The page will continue to run once the connection is restored is",
+    "Retry": "Retry"
   }
 }

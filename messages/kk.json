@@ -44,5 +44,11 @@
   "Loading": {
     "Aralsea Tour": "Aral boyı sayaxatı",
     "Exploring The Aral Sea": "Aral teńizi boylap sayaxat"
+  },
+
+  "NetworkStatus": {
+    "No Internet": "Internet joq",
+    "Network disconnected. The page will continue to run once the connection is restored is": "Tarmaq úzilgen. Baylanıs tiklengennen soń bet islewde dawam etedi",
+    "Retry": "Qayta urınıw"
   }
 }

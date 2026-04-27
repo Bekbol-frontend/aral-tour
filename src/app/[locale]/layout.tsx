@@ -11,6 +11,7 @@ import NextTopLoader from "nextjs-toploader";
 import "../styles/globals.css";
 import { ContactProvider } from "../provider/ContactProvider";
 import { getContact } from "@/shared/lib/api/get-contact";
+import { NetworkStatus } from "@/shared/ui/NetworkStatus";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -45,6 +46,7 @@ export default async function RootLayout({ children, params }: Props) {
           shadow="0 0 10px #11b2b8, 0 0 5px #031b1c"
         />
         <NextIntlClientProvider>
+          <NetworkStatus />
           <ContactProvider data={contactResponse.data.data}>
             <div id="main">
               <Header />
