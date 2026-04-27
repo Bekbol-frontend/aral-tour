@@ -2,7 +2,7 @@
 
 import { IBanner } from "@/shared/types/banner";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade } from "swiper/modules";
+import { EffectFade, Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,7 +24,8 @@ function Banner({ data }: IProps) {
     <Swiper
       spaceBetween={30}
       effect={"fade"}
-      modules={[EffectFade]}
+      autoplay={{ delay: 2500, disableOnInteraction: false }}
+      modules={[Autoplay, EffectFade]}
       className="h-[70vh] md:h-[80vh]"
     >
       {data.images.map((el, index) => (

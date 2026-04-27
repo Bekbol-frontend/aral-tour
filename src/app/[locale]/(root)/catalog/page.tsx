@@ -12,13 +12,18 @@ const getCatalogBanner = async () => {
   return await API.get<IData<IBanner>>("api/categories/banner");
 };
 
-async function CatalogPage() {
+async function CatalogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const res = await getCatalogBanner();
+  const { category } = await searchParams;
 
   return (
     <>
       <Banner data={res.data.data} />
-      <Catalog />
+      <Catalog category={category}/>
       <FAQ />
       <Contact />
     </>
