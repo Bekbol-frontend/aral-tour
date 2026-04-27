@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl";
+import { Title } from "../../Title";
+import { Description } from "../../Description";
 
 export default function Loading() {
   const t = useTranslations("Loading");
@@ -23,13 +25,13 @@ export default function Loading() {
         </div>
 
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-[6px] text-primary-350 uppercase">
+          <Title className="tracking-[6px] text-primary-350 uppercase">
             {t("Aralsea Tour")}
-          </h1>
+          </Title>
 
-          <p className="mt-4 text-secondary-100 tracking-[4px] text-sm animate-pulse">
+          <Description className="mt-4 text-secondary-100 tracking-[4px] animate-pulse">
             {t("Exploring The Aral Sea")}...
-          </p>
+          </Description>
         </div>
 
         <div className="flex gap-3">
