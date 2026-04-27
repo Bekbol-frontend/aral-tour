@@ -6,7 +6,7 @@ export default function Loading() {
   const t = useTranslations("Loading");
 
   return (
-    <div className="fixed inset-0 z-50 bg-secondary-500 flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 z-50 bg-secondary-500 flex items-center justify-center overflow-hidden p-15">
       <div className="absolute inset-0 overflow-hidden">
         <div className="wave wave-1" />
         <div className="wave wave-2" />
