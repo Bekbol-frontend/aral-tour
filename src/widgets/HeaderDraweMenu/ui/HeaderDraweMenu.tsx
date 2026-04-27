@@ -1,7 +1,7 @@
 import { SwitchLang } from "@/shared/ui/SwitchLang";
 import { HeaderContact } from "@/widgets/HeaderContact";
 import { HeaderMenu } from "@/widgets/HeaderMenu";
-import { Menu } from "lucide-react";
+import { HiBars3 } from "react-icons/hi2";
 
 export const ID_DRAWER_MENU = "header-menu-drawer";
 
@@ -14,7 +14,7 @@ function HeaderDraweMenu() {
           htmlFor={ID_DRAWER_MENU}
           className="btn p-10 bg-primary-350 text-secondary-300 border-0"
         >
-          <Menu size={18} strokeWidth={2} />
+          <HiBars3 size={18} />
         </label>
       </div>
       <div className="drawer-side">

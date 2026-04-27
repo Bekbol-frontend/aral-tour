@@ -3,7 +3,7 @@ import { appRoutes } from "@/shared/config/route";
 import { Description } from "@/shared/ui/Description";
 import { Rating } from "@/shared/ui/Rating";
 import { Title } from "@/shared/ui/Title";
-import { ChevronRight, Eye } from "lucide-react";
+import { FaChevronRight, FaEye } from "react-icons/fa";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,8 +72,7 @@ async function TourCard(props: IProps) {
           <div className="flex flex-col">
             <Rating value={rating} className="mb-5" />
             <Description variyant="medium" className="flex items-center gap-5">
-              <Eye size={20} strokeWidth={2} /> {`(${reviews_count})`}{" "}
-              {t("reviews")}
+              <FaEye size={20} /> {`(${reviews_count})`} {t("reviews")}
             </Description>
           </div>
         </div>
@@ -100,12 +99,12 @@ async function TourCard(props: IProps) {
           </div>
           <Link
             href={appRoutes.home}
-            className="btn bg-secondary-300 text-primary-300 p-10 w-full md:w-auto flex md:inline-flex"
+            className="btn px-15! bg-secondary-300 text-primary-300 w-full md:w-auto flex md:inline-flex"
           >
             <Description className="block md:hidden">
               {t("Show more")}
             </Description>
-            <ChevronRight className="hidden md:inline-flex" />
+            <FaChevronRight className="hidden md:inline-flex" />
           </Link>
         </div>
       </div>

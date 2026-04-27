@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Ref } from "react";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 interface IProps {
   prevRef: Ref<HTMLButtonElement>;
@@ -14,14 +14,14 @@ function HeroNavigate({ prevRef, nextRef }: IProps) {
           ref={prevRef}
           className="btn btn-outline md:rounded-none! md:h-full border-none bg-primary-300 text-secondary-300 md:bg-[rgba(0,0,0,0.07)] md:hover:bg-[rgba(0,0,0,0.2)] md:text-white md:w-[70] p-0 md:p-1 w-[40] h-[40]"
         >
-          <ChevronLeft />
+          <FaChevronLeft />
         </button>
 
         <button
           ref={nextRef}
           className="btn btn-outline md:rounded-none! md:h-full border-none bg-primary-300 text-secondary-300 md:bg-[rgba(0,0,0,0.07)] md:hover:bg-[rgba(0,0,0,0.2)] md:text-white md:w-[70] p-0 md:p-1 w-[40] h-[40]"
         >
-          <ChevronRight />
+          <FaChevronRight />
         </button>
       </div>
     </>

@@ -1,5 +1,5 @@
 import { clsx } from "@/shared/lib/clsx";
-import { Phone } from "lucide-react";
+import { FaPhoneAlt } from "react-icons/fa";
 import { ReactNode } from "react";
 
 interface IProps {
@@ -24,7 +24,7 @@ function PhoneBtn(props: IProps) {
         },
       )}
     >
-      <Phone size={20} strokeWidth={2} /> {children ?? `+998 93 367 25 55`}
+      <FaPhoneAlt size={17} /> {children ?? `+998 93 367 25 55`}
     </a>
   );
 }

@@ -14,7 +14,7 @@ import { IReview } from "../../model/types";
 import { Description } from "@/shared/ui/Description";
 import { Title } from "@/shared/ui/Title";
 import { Rating } from "@/shared/ui/Rating";
-import { Play } from "lucide-react";
+import { FaYoutube } from "react-icons/fa";
 import ReviewSwiperNavigate from "./ReviewSwiperNavigate/ReviewSwiperNavigate";
 import { Modal } from "@/shared/ui/Modal";
 import { YoutubePlayer } from "@/shared/ui/YoutubePlayer";
@@ -65,12 +65,12 @@ function ReviewSwiper({ data }: IProps) {
         >
           {data.map((el) => (
             <SwiperSlide key={el.id}>
-              <div className="h-full! border-[1] border-light-gray-250 rounded-6 p-20 relative overflow-hidden">
+              <div className="h-full! border-[1] border-light-gray-250 rounded-6 p-20 relative overflow-hidden bg-white">
                 <span
-                  className="shadow inline-flex items-center justify-center bg-secondary-250 text-primary-300 absolute top-0 right-0 rounded-bl-6 py-15 px-20 cursor-pointer"
+                  className="shadow inline-flex items-center justify-center bg-white absolute top-0 right-0 rounded-bl-6 py-10 px-15 cursor-pointer hover:bg-light-gray-100"
                   onClick={() => onShowModal(el.video_url)}
                 >
-                  <Play />
+                  <FaYoutube size={30} className="text-red-600" />
                 </span>
                 <div className="mb-30">
                   <Title variyant="small" className="text-secondary-300">

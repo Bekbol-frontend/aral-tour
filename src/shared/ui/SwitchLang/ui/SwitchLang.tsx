@@ -1,6 +1,6 @@
 "use client";
 import { useRouter, usePathname } from "@/i18n/navigation";
-import { ChevronDown } from "lucide-react";
+import { FaAngleDown } from "react-icons/fa6";
 import { Description } from "../../Description";
 import { clsx } from "@/shared/lib/clsx";
 import { useLocale } from "next-intl";
@@ -19,7 +19,7 @@ function SwitchLang() {
     <details className="dropdown">
       <summary className="btn m-1 flex items-center justify-between gap-2">
         {langs[locale as keyof typeof langs].label}
-        <ChevronDown size={16} strokeWidth={2} />
+        <FaAngleDown size={16} />
       </summary>
 
       <ul className="menu dropdown-content bg-base-100 relative md:absolute rounded-box w-full md:w-52 p-2 shadow-sm">

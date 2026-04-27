@@ -1,7 +1,7 @@
 import { ReactNode, useEffect } from "react";
 import { Portal } from "../../Portal";
 import { clsx } from "@/shared/lib/clsx";
-import { X } from "lucide-react";
+import { IoMdClose } from "react-icons/io";
 
 interface IProps {
   open: boolean;
@@ -36,7 +36,7 @@ function Modal({ open, onClose, children, className = "" }: IProps) {
             onClick={onClose}
             className="btn btn-circle! bg-secondary-300 shadow-none border-none text-white absolute top-2 right-2"
           >
-            <X />
+            <IoMdClose size={22} />
           </button>
           {children}
         </div>
