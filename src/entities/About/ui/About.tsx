@@ -7,7 +7,11 @@ import { Container } from "@/shared/ui/Container";
 import AboutInfo from "./AboutInfo/AboutInfo";
 import AboutSwiper from "./AboutSwiper/AboutSwiper";
 
-async function About() {
+interface IProps {
+  page?: boolean;
+}
+
+async function About({ page = false }: IProps) {
   const res = await getAbout();
 
   if (!res.data.data) {
@@ -18,7 +22,7 @@ async function About() {
 
   return (
     <Section>
-      <MainTitle title="About" />
+      {page ? null : <MainTitle title="About" />}
       <Container>
         <Award data={res.data.data.award} />
       </Container>

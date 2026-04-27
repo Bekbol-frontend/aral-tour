@@ -12,7 +12,8 @@
   },
 
   "NotFoundPage": {
-    "Page not found": "Страница не найдена"
+    "Page not found": "Страница не найдена",
+    "Home page": "Главная страница"
   },
 
   "MainTitle": {

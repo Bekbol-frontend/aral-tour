@@ -12,7 +12,8 @@
   },
 
   "NotFoundPage": {
-    "Page not found": "Sahifa topilmadi"
+    "Page not found": "Sahifa topilmadi",
+    "Home page": "Bosh sahifa"
   },
 
   "MainTitle": {
