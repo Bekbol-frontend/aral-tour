@@ -7,6 +7,7 @@ import { FaChevronRight, FaEye } from "react-icons/fa";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
+import { PhoneBtn } from "@/shared/ui/PhoneBtn";
 
 interface IProps {
   imgUrl: string;
@@ -90,12 +91,9 @@ async function TourCard(props: IProps) {
             <button className="btn bg-primary-300 text-secondary-300 flex-1 md:flex-0">
               {t("Book")}
             </button>
-            <a
-              href={`tel:${phone}`}
-              className="btn flex-[1.2] whitespace-nowrap md:flex-0 text-description-small"
-            >
+            <PhoneBtn className="btn bg-base-border! text-secondary-300! flex-[1.2] whitespace-nowrap md:flex-0 text-description-small">
               {phone}
-            </a>
+            </PhoneBtn>
           </div>
           <Link
             href={appRoutes.home}
