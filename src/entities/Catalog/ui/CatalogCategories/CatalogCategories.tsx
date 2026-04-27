@@ -30,7 +30,7 @@ function CatalogCategories({ data, category }: IProps) {
 
   return (
     <div className="mb-30 mx-auto max-w-[1200]">
-      <div className="flex md:justify-center gap-10 overflow-auto px-10">
+      <div className="flex md:justify-center gap-10 overflow-auto pb-10 px-10">
         <button
           className={clsx(["btn bg-base-border"], {
             "bg-secondary-350 text-white": !category,
