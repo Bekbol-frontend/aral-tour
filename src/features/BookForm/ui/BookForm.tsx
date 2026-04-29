@@ -1,5 +1,7 @@
 import { clsx } from "@/shared/lib/clsx";
 import { useState } from "react";
+import BookFormBlock from "./BookFormBlock/BookFormBlock";
+import QuestionFormBlock from "./QuestionFormBlock/QuestionFormBlock";
 
 function BookForm() {
   const [activeTab, setActiveTab] = useState(0);
@@ -25,9 +27,8 @@ function BookForm() {
         </button>
       </div>
 
-      <div className="p-4">
-        {activeTab === 0 && <div className="">Content for Tab 1</div>}
-        {activeTab === 1 && <div className="">Content for Tab 2</div>}
+      <div className="pt-20">
+        {activeTab === 0 ? <QuestionFormBlock /> : <BookFormBlock />}
       </div>
     </div>
   );
