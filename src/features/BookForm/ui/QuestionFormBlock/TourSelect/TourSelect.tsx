@@ -3,6 +3,7 @@
 import { PUBLIC_API } from "@/shared/api";
 import { clsx } from "@/shared/lib/clsx";
 import { IData } from "@/shared/types/data";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 interface ITour {
@@ -18,6 +19,7 @@ interface IProps {
 
 function TourSelect(props: IProps) {
   const { tourId, onChangeTourId, tourIdValidate } = props;
+  const locale = useLocale();
 
   const [tours, setTours] = useState<ITour[]>([]);
   const [loading, setLoading] = useState(false);
@@ -29,7 +31,12 @@ function TourSelect(props: IProps) {
       const getTours = async () => {
         try {
           setLoading(true);
-          const res = await PUBLIC_API.get<IData<ITour[]>>("api/tours");
+
+          const res = await PUBLIC_API.get<IData<ITour[]>>("api/tours", {
+            headers: {
+              "Accept-Language": locale,
+            },
+          });
 
           if (!res.data.success) {
             throw new Error("Error");
@@ -40,13 +47,12 @@ function TourSelect(props: IProps) {
           setError(true);
         } finally {
           setLoading(false);
-          setError(false);
         }
       };
 
       getTours();
     }
-  }, [fetchEnabled]);
+  }, [fetchEnabled, locale]);
 
   return (
     <div>
@@ -60,10 +66,10 @@ function TourSelect(props: IProps) {
           setFetchEnabled(true);
         }}
       >
-        {loading && <option disabled>Loading...</option>}
-        <option disabled selected>
+        <option disabled value="">
           Select tour
         </option>
+        {loading && <option disabled>Loading...</option>}
         {tours.map((el) => (
           <option key={el.id} value={`${el.id}`}>
             {el.title}
