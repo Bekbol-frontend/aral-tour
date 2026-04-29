@@ -71,7 +71,13 @@ function TourSelect(props: IProps) {
         </option>
         {loading && <option disabled>Loading...</option>}
         {tours.map((el) => (
-          <option key={el.id} value={`${el.id}`}>
+          <option
+            key={el.id}
+            value={`${el.id}`}
+            className={clsx([], {
+              "bg-base-border": el.id === +tourId,
+            })}
+          >
             {el.title}
           </option>
         ))}
