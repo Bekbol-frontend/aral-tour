@@ -41,7 +41,7 @@ export default function NetworkStatus() {
 
         <Description className="text-gray-150 mb-6">
           {t(
-            "Network disconnected. The page will continue to run once the connection is restored is",
+            "Network disconnected The page will continue to run once the connection is restored is",
           )}
         </Description>
 
