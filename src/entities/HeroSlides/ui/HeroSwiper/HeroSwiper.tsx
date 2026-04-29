@@ -14,6 +14,7 @@ import { Navigation, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
+import SwiperBtns from "./SwiperBtns/SwiperBtns";
 
 interface IProps {
   data: IHeroSlide[];
@@ -26,49 +27,50 @@ function HeroSwiper({ data }: IProps) {
   const [_, setInit] = useState(false);
 
   return (
-    <div className="relative">
-      <Swiper
-        effect="fade"
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        modules={[Navigation, EffectFade]}
-        loop
-        onInit={() => setInit(true)}
-        autoplay={{
-          delay: 10000,
-          disableOnInteraction: false,
-        }}
-      >
-        {data.map((el) => (
-          <SwiperSlide
-            className="text-center min-h-[70vh] md:min-h-[80vh] flex! flex-col items-center justify-center"
-            style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${env.baseUrl}/${el.image_path})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed",
-            }}
-          >
-            <div className="max-w-[700] mx-auto px-50 py-20 md:px-30">
-              <Title variyant="small" className="text-primary-50">
-                {el.title}
-              </Title>
-              <Heading variyant="small" className="text-primary-50 my-10">
-                {el.subtitle}
-              </Heading>
-              <Title variyant="medium" className="text-primary-50 mb-50">
-                {el.description}
-              </Title>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Swiper
+      effect="fade"
+      navigation={{
+        prevEl: prevRef.current,
+        nextEl: nextRef.current,
+      }}
+      modules={[Navigation, EffectFade]}
+      loop
+      onInit={() => setInit(true)}
+      autoplay={{
+        delay: 10000,
+        disableOnInteraction: false,
+      }}
+      className="h-[70vh] md:h-[80vh] relative!"
+    >
+      {data.map((el) => (
+        <SwiperSlide
+          className="text-center flex! flex-col items-center justify-center h-full!"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${env.baseUrl}/${el.image_path})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          <div className="max-w-[700] mx-auto px-50 py-20 md:px-30">
+            <Title variyant="small" className="text-primary-50">
+              {el.title}
+            </Title>
+            <Heading variyant="small" className="text-primary-50 my-10">
+              {el.subtitle}
+            </Heading>
+            <Title variyant="medium" className="text-primary-50 mb-50">
+              {el.description}
+            </Title>
+
+            <SwiperBtns />
+          </div>
+        </SwiperSlide>
+      ))}
 
       <HeroNavigate prevRef={prevRef} nextRef={nextRef} />
-    </div>
+    </Swiper>
   );
 }
 
