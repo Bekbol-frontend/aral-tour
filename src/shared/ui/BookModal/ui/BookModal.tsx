@@ -1,3 +1,4 @@
+import { BookForm } from "@/features/BookForm";
 import { Modal } from "../../Modal";
 
 interface IProps {
@@ -8,7 +9,7 @@ interface IProps {
 function BookModal({ open, onClose }: IProps) {
   return (
     <Modal open={open} onClose={onClose}>
-      <div>Book modal</div>
+      <BookForm />
     </Modal>
   );
 }
