@@ -63,6 +63,17 @@
     "WhatsApp phone": "WhatsApp telefon",
     "Region": "Wálayat",
     "Comment": "Pikir",
-    "Send": "Jiberiw"
+    "Send": "Jiberiw",
+
+    "Phone": "Telefon",
+    "Additional phone": "Qosımsha telefon",
+    "Number of people": "Adamlar sanı",
+    "Start date": "Baslanǵan sánesi",
+    "End date": "Tamamlaw sánesi"
+  },
+
+  "HeroSwiper": {
+    "Pick a tour": "Túrdi tańlań",
+    "Book hostel": "Xostel bronlaw"
   }
 }

@@ -63,6 +63,17 @@
     "WhatsApp phone": "WhatsApp telefon",
     "Region": "Viloyat",
     "Comment": "Izoh",
-    "Send": "Yuborish"
+    "Send": "Yuborish",
+
+    "Phone": "Telefon",
+    "Additional phone": "Qo‘shimcha telefon",
+    "Number of people": "Odamlar soni",
+    "Start date": "Boshlanish sanasi",
+    "End date": "Tugash sanasi"
+  },
+
+  "HeroSwiper": {
+    "Pick a tour": "Tur tanlash",
+    "Book hostel": "Xostel bandlash"
   }
 }

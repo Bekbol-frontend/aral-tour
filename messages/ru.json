@@ -63,6 +63,17 @@
     "WhatsApp phone": "WhatsApp телефон",
     "Region": "Область",
     "Comment": "Комментарий",
-    "Send": "Отправлять"
+    "Send": "Отправлять",
+
+    "Phone": "Телефон",
+    "Additional phone": "Дополнительный телефон",
+    "Number of people": "Количество людей",
+    "Start date": "Дата начала",
+    "End date": "Дата окончания"
+  },
+
+  "HeroSwiper": {
+    "Pick a tour": "Подобрать тур",
+    "Book hostel": "Забронировать хостел"
   }
 }

@@ -63,6 +63,17 @@
     "WhatsApp phone": "WhatsApp phone",
     "Region": "Region",
     "Comment": "Comment",
-    "Send": "Send"
+    "Send": "Send",
+
+    "Phone": "Phone",
+    "Additional phone": "Additional phone",
+    "Number of people": "Number of people",
+    "Start date": "Start date",
+    "End date": "End date"
+  },
+
+  "HeroSwiper": {
+    "Pick a tour": "Pick a tour",
+    "Book hostel": "Book hostel"
   }
 }
