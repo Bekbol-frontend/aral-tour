@@ -26,6 +26,7 @@ function TourList({ data }: IProps) {
         {data.map((tour) => (
           <TourCard
             key={tour.id}
+            slug={tour.slug}
             imgUrl={tour.main_image}
             title={tour.title}
             duration_days={tour.duration_days}

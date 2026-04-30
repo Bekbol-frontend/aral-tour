@@ -6,13 +6,13 @@ import { Description } from "@/shared/ui/Description";
 import { Rating } from "@/shared/ui/Rating";
 import { Title } from "@/shared/ui/Title";
 import { FaChevronRight, FaEye } from "react-icons/fa";
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
 import { PhoneBtn } from "@/shared/ui/PhoneBtn";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 interface IProps {
+  slug: string;
   imgUrl: string;
   title: string;
   duration_days: number;
@@ -30,6 +30,7 @@ function TourCard(props: IProps) {
   const t = useTranslations("TourCard");
 
   const {
+    slug,
     imgUrl,
     title,
     duration_days,
@@ -105,7 +106,7 @@ function TourCard(props: IProps) {
             </PhoneBtn>
           </div>
           <Link
-            href={appRoutes.home}
+            href={`${appRoutes.catalog}/${slug}`}
             className="btn px-15! bg-secondary-300 text-primary-300 w-full md:w-auto flex md:inline-flex"
           >
             <Description className="block md:hidden">
