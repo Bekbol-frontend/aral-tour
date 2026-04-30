@@ -52,11 +52,12 @@ function CatalogImages({ data }: IProps) {
           {data.map((el, index) => (
             <SwiperSlide key={index} className="w-full! h-full!">
               <Image
-                src={`${env.baseUrl}/${el.url}`}
+                src={`${env.baseUrl}${el.url}`}
                 alt="Image"
                 width={400}
                 height={400}
                 className="object-cover w-full! h-full! rounded-10"
+                priority
               />
             </SwiperSlide>
           ))}
@@ -81,13 +82,14 @@ function CatalogImages({ data }: IProps) {
         {data.map((el, index) => (
           <SwiperSlide key={el.id} className="h-full! cursor-pointer">
             <Image
-              src={`${env.baseUrl}/${el.url}`}
+              src={`${env.baseUrl}${el.url}`}
               alt="Image"
               width={100}
               height={100}
               className={clsx(["object-cover w-full! h-full! rounded-6"], {
                 "border-2 border-secondary-300": activeIndex === index,
               })}
+              property=""
             />
           </SwiperSlide>
         ))}
