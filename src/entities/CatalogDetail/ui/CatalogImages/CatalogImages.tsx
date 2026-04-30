@@ -56,7 +56,6 @@ function CatalogImages({ data }: IProps) {
                 alt="Image"
                 width={400}
                 height={400}
-                priority
                 className="object-cover w-full! h-full! rounded-10"
               />
             </SwiperSlide>
@@ -86,7 +85,6 @@ function CatalogImages({ data }: IProps) {
               alt="Image"
               width={100}
               height={100}
-              priority
               className={clsx(["object-cover w-full! h-full! rounded-6"], {
                 "border-2 border-secondary-300": activeIndex === index,
               })}
