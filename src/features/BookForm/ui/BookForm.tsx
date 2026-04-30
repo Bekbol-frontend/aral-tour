@@ -1,10 +1,15 @@
+"use client";
+
 import { clsx } from "@/shared/lib/clsx";
 import { useState } from "react";
 import BookFormBlock from "./BookFormBlock/BookFormBlock";
 import QuestionFormBlock from "./QuestionFormBlock/QuestionFormBlock";
+import { useTranslations } from "next-intl";
 
 function BookForm() {
   const [activeTab, setActiveTab] = useState(0);
+
+  const t = useTranslations("BookForm");
 
   return (
     <div>
@@ -15,7 +20,7 @@ function BookForm() {
           })}
           onClick={() => setActiveTab(0)}
         >
-          Вопрос
+          {t("Question")}
         </button>
         <button
           className={clsx(["tab btn shadow-none"], {
@@ -23,7 +28,7 @@ function BookForm() {
           })}
           onClick={() => setActiveTab(1)}
         >
-          Бронирование
+          {t("Book")}
         </button>
       </div>
 

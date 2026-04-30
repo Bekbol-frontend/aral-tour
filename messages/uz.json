@@ -50,5 +50,19 @@
     "No Internet": "Internet yo‘q",
     "Network disconnected The page will continue to run once the connection is restored is": "Tarmoq uzilgan. Ulanish tiklangandan so‘ng sahifa ishlashda davom etadi",
     "Retry": "Qayta urinish"
+  },
+
+  "BookForm": {
+    "Question": "Savol",
+    "Book": "Bandlash",
+    "Something went wrong while sending": "Yuborishda nimadir xato ketdi",
+    "Fill in the field": "Maydonni to'ldiring",
+    "Select tour": "Turni tanlang",
+    "Loading": "Yuklanmoqda...",
+    "Full name": "To'liq ism",
+    "WhatsApp phone": "WhatsApp telefon",
+    "Region": "Viloyat",
+    "Comment": "Izoh",
+    "Send": "Yuborish"
   }
 }

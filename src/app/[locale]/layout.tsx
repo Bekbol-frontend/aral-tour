@@ -12,6 +12,7 @@ import "../styles/globals.css";
 import { ContactProvider } from "../provider/ContactProvider";
 import { getContact } from "@/shared/lib/api/get-contact";
 import { NetworkStatus } from "@/shared/ui/NetworkStatus";
+import { Toaster } from "react-hot-toast";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -53,6 +54,8 @@ export default async function RootLayout({ children, params }: Props) {
               <main id="main-block">{children}</main>
               <Footer />
             </div>
+
+            <Toaster />
           </ContactProvider>
         </NextIntlClientProvider>
       </body>

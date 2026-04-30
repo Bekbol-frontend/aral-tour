@@ -10,13 +10,6 @@ const API = axios.create({
   },
 });
 
-export const PUBLIC_API = axios.create({
-  baseURL: env.baseUrl,
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-
 export const getServerClient = async () => {
   const locale = await getLocale();
 

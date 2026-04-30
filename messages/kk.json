@@ -50,5 +50,19 @@
     "No Internet": "Internet joq",
     "Network disconnected The page will continue to run once the connection is restored is": "Tarmaq úzilgen. Baylanıs tiklengennen soń bet islewde dawam etedi",
     "Retry": "Qayta urınıw"
+  },
+
+  "BookForm": {
+    "Question": "Soraw",
+    "Book": "Bronlaw",
+    "Something went wrong while sending": "Jóneltiwde qandayda bir qáteler júz berdi",
+    "Fill in the field": "Maydandı toltırıń",
+    "Select tour": "Túrdi tańlań",
+    "Loading": "Júklenip atır...",
+    "Full name": "Tolıq atınız",
+    "WhatsApp phone": "WhatsApp telefon",
+    "Region": "Wálayat",
+    "Comment": "Pikir",
+    "Send": "Jiberiw"
   }
 }

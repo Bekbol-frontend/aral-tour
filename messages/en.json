@@ -50,5 +50,19 @@
     "No Internet": "No Internet",
     "Network disconnected The page will continue to run once the connection is restored is": "Network disconnected. The page will continue to run once the connection is restored is",
     "Retry": "Retry"
+  },
+
+  "BookForm": {
+    "Question": "Question",
+    "Book": "Book",
+    "Something went wrong while sending": "Something went wrong while sending",
+    "Fill in the field": "Fill in the field",
+    "Select tour": "Select tour",
+    "Loading": "Loading...",
+    "Full name": "Full name",
+    "WhatsApp phone": "WhatsApp phone",
+    "Region": "Region",
+    "Comment": "Comment",
+    "Send": "Send"
   }
 }

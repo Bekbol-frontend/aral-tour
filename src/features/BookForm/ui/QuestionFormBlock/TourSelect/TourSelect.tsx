@@ -1,9 +1,9 @@
 "use client";
 
-import { PUBLIC_API } from "@/shared/api";
+import PUBLIC_API from "@/shared/api/publicAPI";
 import { clsx } from "@/shared/lib/clsx";
 import { IData } from "@/shared/types/data";
-import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 interface ITour {
@@ -18,8 +18,9 @@ interface IProps {
 }
 
 function TourSelect(props: IProps) {
+  const t = useTranslations("BookForm");
+
   const { tourId, onChangeTourId, tourIdValidate } = props;
-  const locale = useLocale();
 
   const [tours, setTours] = useState<ITour[]>([]);
   const [loading, setLoading] = useState(false);
@@ -32,11 +33,7 @@ function TourSelect(props: IProps) {
         try {
           setLoading(true);
 
-          const res = await PUBLIC_API.get<IData<ITour[]>>("api/tours", {
-            headers: {
-              "Accept-Language": locale,
-            },
-          });
+          const res = await PUBLIC_API.get<IData<ITour[]>>("api/tours");
 
           if (!res.data.success) {
             throw new Error("Error");
@@ -52,7 +49,7 @@ function TourSelect(props: IProps) {
 
       getTours();
     }
-  }, [fetchEnabled, locale]);
+  }, [fetchEnabled]);
 
   return (
     <div>
@@ -67,9 +64,11 @@ function TourSelect(props: IProps) {
         }}
       >
         <option disabled value="">
-          Select tour
+          {t("Select tour")}
         </option>
-        {loading && <option disabled>Loading...</option>}
+
+        {loading && <option disabled>{t("Loading")}</option>}
+
         {tours.map((el) => (
           <option
             key={el.id}
@@ -85,7 +84,7 @@ function TourSelect(props: IProps) {
       {tourIdValidate && (
         <div className="label">
           <span className="label-text-alt text-error">
-            Invalid email address
+            {t("Fill in the field")}
           </span>
         </div>
       )}
