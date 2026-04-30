@@ -35,7 +35,7 @@ function CatalogImages({ data }: IProps) {
 
   return (
     <div className="">
-      <div className="w-full h-[400] mb-20 relative">
+      <div className="w-full h-[400] md:h-[500] mb-20 relative">
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
