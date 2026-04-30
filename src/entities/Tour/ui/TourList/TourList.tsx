@@ -1,15 +1,15 @@
 "use client";
 
-import { ITour } from "@/entities/Tour";
 import { TourCard } from "@/entities/TourCard";
-import { BookModal } from "@/shared/ui/BookModal";
+import { ITour } from "../../model/types";
 import { useCallback, useState } from "react";
+import { BookModal } from "@/shared/ui/BookModal";
 
 interface IProps {
   data: ITour[];
 }
 
-function CatalogProducts({ data }: IProps) {
+function TourList({ data }: IProps) {
   const [modal, setModal] = useState(false);
 
   const onShowModal = useCallback(() => {
@@ -45,4 +45,4 @@ function CatalogProducts({ data }: IProps) {
   );
 }
 
-export default CatalogProducts;
+export default TourList;

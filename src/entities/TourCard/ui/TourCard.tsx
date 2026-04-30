@@ -1,3 +1,5 @@
+"use client";
+
 import { env } from "@/shared/config/env";
 import { appRoutes } from "@/shared/config/route";
 import { Description } from "@/shared/ui/Description";
@@ -8,6 +10,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneBtn } from "@/shared/ui/PhoneBtn";
+import { useTranslations } from "next-intl";
 
 interface IProps {
   imgUrl: string;
@@ -19,10 +22,12 @@ interface IProps {
   slogan: string;
   price: number;
   phone: string;
+
+  onShowModal: () => void;
 }
 
-async function TourCard(props: IProps) {
-  const t = await getTranslations("TourCard");
+function TourCard(props: IProps) {
+  const t = useTranslations("TourCard");
 
   const {
     imgUrl,
@@ -34,6 +39,7 @@ async function TourCard(props: IProps) {
     slogan,
     price,
     phone,
+    onShowModal,
   } = props;
 
   return (
@@ -88,7 +94,10 @@ async function TourCard(props: IProps) {
 
         <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
           <div className="flex flex-1 w-full gap-5 md:gap-10">
-            <button className="btn bg-primary-300 text-secondary-300 flex-1 md:flex-0">
+            <button
+              className="btn bg-primary-300 text-secondary-300 flex-1 md:flex-0"
+              onClick={onShowModal}
+            >
               {t("Book")}
             </button>
             <PhoneBtn className="btn bg-base-border! text-secondary-300! flex-[1.2] whitespace-nowrap md:flex-0 text-description-small">
