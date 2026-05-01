@@ -129,7 +129,7 @@ function CatalogInfo(props: IProps) {
 
         <div>
           <div className="flex gap-15 mb-5">
-            <span className="p-15 bg-primary-350 text-secondary-300 rounded-4 inline-flex items-center justify-center self-start">
+            <span className="p-15 shadow bg-primary-350 text-secondary-300 rounded-4 inline-flex items-center justify-center self-start">
               <FaMapMarked className="text-title-medium" />
             </span>
             <Description>{routes}</Description>
