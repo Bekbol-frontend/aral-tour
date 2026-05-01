@@ -1,9 +1,19 @@
+"use client";
+
+import { BookModal } from "@/shared/ui/BookModal";
 import { Description } from "@/shared/ui/Description";
 import { Heading } from "@/shared/ui/Heading";
 import { Rating } from "@/shared/ui/Rating";
 import { Title } from "@/shared/ui/Title";
-import { getTranslations } from "next-intl/server";
-import { FaEye } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import { useCallback, useState } from "react";
+import {
+  FaEye,
+  FaMapMarked,
+  FaPhone,
+  FaUserCheck,
+  FaUsers,
+} from "react-icons/fa";
 
 interface IProps {
   slogan: string;
@@ -15,10 +25,20 @@ interface IProps {
   max_people: number;
   min_age: number;
   routes: string;
+  phone: string;
 }
 
-async function CatalogInfo(props: IProps) {
-  const t = await getTranslations("TourCard");
+function CatalogInfo(props: IProps) {
+  const t = useTranslations("TourCard");
+  const [modal, setModal] = useState(false);
+
+  const onShowModal = useCallback(() => {
+    setModal(true);
+  }, []);
+
+  const onCloseModal = useCallback(() => {
+    setModal(false);
+  }, []);
 
   const {
     slogan,
@@ -30,47 +50,96 @@ async function CatalogInfo(props: IProps) {
     max_people,
     min_age,
     routes,
+    phone,
   } = props;
 
   return (
-    <div>
-      <Heading variyant="small">{slogan}</Heading>
+    <>
+      <div>
+        <Heading variyant="small">{slogan}</Heading>
 
-      <div className="bg-light-gray-200 inline-flex py-5 px-20 rounded-6 my-15 md:my-20">
-        <Description variyant="medium">
-          {duration_days} {t("day")}{" "}
-          {duration_nights > 0 ? (
-            <>
-              {"/"} {duration_nights} {t("night")}
-            </>
-          ) : null}
-        </Description>
-      </div>
+        <div className="bg-light-gray-200 inline-flex py-5 px-20 rounded-6 my-20">
+          <Description variyant="medium">
+            {duration_days} {t("day")}{" "}
+            {duration_nights > 0 ? (
+              <>
+                {"/"} {duration_nights} {t("night")}
+              </>
+            ) : null}
+          </Description>
+        </div>
 
-      <div className="mb-15 md:mb-20 flex items-center gap-20">
-        <div className="flex gap-10 items-center">
-          <div className="w-[40] h-[40] inline-flex items-center justify-center rounded-full bg-primary-300 text-secondary-300 shadow">
-            <Description variyant="large">{rating}</Description>
+        <div className="mb-20 flex items-center gap-20">
+          <div className="flex gap-10 items-center">
+            <div className="w-[40] h-[40] inline-flex items-center justify-center rounded-full bg-primary-300 text-secondary-300 shadow">
+              <Description variyant="large">{rating}</Description>
+            </div>
+            <div className="flex flex-col">
+              <Rating value={rating} />
+            </div>
           </div>
-          <div className="flex flex-col">
-            <Rating value={rating} />
+
+          <Description variyant="medium" className="flex items-center gap-5">
+            <FaEye size={20} /> {`(${reviews_count})`} {t("reviews")}
+          </Description>
+        </div>
+
+        <div className="mb-30">
+          <Heading variyant="medium" className="mb-5">
+            {t("from")} {price} $
+          </Heading>
+          <Description className="text-gray-150">
+            *Цена зависит от количества человек в группе.
+          </Description>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-15 md:gap-30 mb-30">
+          <div>
+            <div className="flex items-center gap-10 mb-5">
+              <FaUsers className="text-secondary-200 text-title-large" />
+              <Title>{max_people}+</Title>
+            </div>
+            <Description className="text-gray-150">
+              Максимальное количество путешественников
+            </Description>
+          </div>
+          <div>
+            <div className="flex items-center gap-10 mb-5">
+              <FaUserCheck className="text-secondary-200 text-title-large" />
+              <Title>{min_age}+</Title>
+            </div>
+            <Description className="text-gray-150">Возраст</Description>
           </div>
         </div>
 
-        <Description variyant="medium" className="flex items-center gap-5">
-          <FaEye size={20} /> {`(${reviews_count})`} {t("reviews")}
-        </Description>
+        <div className="flex gap-10 mb-30">
+          <button
+            className="btn bg-primary-350 text-secondary-300"
+            onClick={onShowModal}
+          >
+            Забронировать
+          </button>
+          <a
+            href={`tel:${phone}`}
+            className="btn bg-secondary-350 text-primary-300"
+          >
+            <FaPhone /> {phone}
+          </a>
+        </div>
+
+        <div>
+          <div className="flex gap-15 mb-5">
+            <span className="p-15 bg-primary-350 text-secondary-300 rounded-4 inline-flex items-center justify-center self-start">
+              <FaMapMarked className="text-title-medium" />
+            </span>
+            <Description>{routes}</Description>
+          </div>
+          <Description className="text-gray-150">Дорожная карта</Description>
+        </div>
       </div>
 
-      <div>
-        <Heading variyant="medium" className="mb-5">
-          {t("from")} {price} $
-        </Heading>
-        <Description className="text-gray-250">
-          *Цена зависит от количества человек в группе.
-        </Description>
-      </div>
-    </div>
+      <BookModal open={modal} onClose={onCloseModal} />
+    </>
   );
 }
 
