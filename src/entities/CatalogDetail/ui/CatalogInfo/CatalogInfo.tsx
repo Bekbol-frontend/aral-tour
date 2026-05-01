@@ -14,6 +14,7 @@ import {
   FaUserCheck,
   FaUsers,
 } from "react-icons/fa";
+import { classBlock } from "../../classBlock";
 
 interface IProps {
   slogan: string;
@@ -55,7 +56,7 @@ function CatalogInfo(props: IProps) {
 
   return (
     <>
-      <div>
+      <div className={classBlock}>
         <Heading variyant="small">{slogan}</Heading>
 
         <div className="bg-light-gray-200 inline-flex py-5 px-20 rounded-6 my-20">

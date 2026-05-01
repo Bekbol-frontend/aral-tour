@@ -2,6 +2,8 @@ import { ICatalogDetail } from "../types";
 import CatalogImages from "./CatalogImages/CatalogImages";
 import CatalogInfo from "./CatalogInfo/CatalogInfo";
 import CatalogTitle from "./CatalogTitle/CatalogTitle";
+import ImportantInformation from "./ImportantInformation/ImportantInformation";
+import ShortDesc from "./ShortDesc/ShortDesc";
 
 interface IProps {
   data: ICatalogDetail;
@@ -9,7 +11,7 @@ interface IProps {
 
 function CatalogDetail(props: IProps) {
   const { data } = props;
-  const { title, images } = data;
+  const { title, images, important_info, description } = data;
 
   return (
     <div>
@@ -18,8 +20,8 @@ function CatalogDetail(props: IProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
         <CatalogImages data={images} />
         <CatalogInfo {...data} />
-        <div>3</div>
-        <div>4</div>
+        <ImportantInformation importantInfo={important_info} />
+        <ShortDesc description={description} />
       </div>
     </div>
   );

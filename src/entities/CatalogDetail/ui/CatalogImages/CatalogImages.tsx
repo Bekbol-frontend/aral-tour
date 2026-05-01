@@ -15,6 +15,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { clsx } from "@/shared/lib/clsx";
+import { classBlock } from "../../classBlock";
 
 interface IProps {
   data: ITourImage[];
@@ -34,7 +35,7 @@ function CatalogImages({ data }: IProps) {
   };
 
   return (
-    <div className="">
+    <div className={classBlock}>
       <div className="w-full h-[400] md:h-[450] mb-20 relative">
         <Swiper
           onSwiper={(swiper) => {

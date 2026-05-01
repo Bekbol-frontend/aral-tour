@@ -6,7 +6,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import { clsx } from "@/shared/lib/clsx";
 
 const btnClass =
-  "opacity-100 absolute z-40 top-[50%] translate-y-[-50%] btn btn-circle! shadow-none! border-none!";
+  "opacity-100 absolute z-2 top-[50%] translate-y-[-50%] btn btn-circle! shadow-none! border-none!";
 
 interface IProps {
   isBeginning: boolean;

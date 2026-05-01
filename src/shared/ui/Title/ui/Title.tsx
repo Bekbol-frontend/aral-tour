@@ -13,39 +13,39 @@ function Title(props: IProps) {
 
   if (variyant === "large") {
     return (
-      <h1
+      <h4
         className={clsx([
           "text-description-large leading-description-large md:leading-title-large  md:text-title-large font-semibold",
           className,
         ])}
       >
         {children}
-      </h1>
+      </h4>
     );
   }
 
   if (variyant === "medium") {
     return (
-      <h2
+      <h5
         className={clsx([
           "text-description-medium leading-description-medium md:leading-title-medium md:text-title-medium font-semibold",
           className,
         ])}
       >
         {children}
-      </h2>
+      </h5>
     );
   }
 
   return (
-    <h3
+    <h6
       className={clsx([
         "text-description-medium leading-description-small md:leading-title-small md:text-title-small font-semibold",
         className,
       ])}
     >
       {children}
-    </h3>
+    </h6>
   );
 }
 
