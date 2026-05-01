@@ -48,7 +48,7 @@ function TourProgramFilterDay({ itineraries }: IProps) {
             className="flex flex-col md:flex-row gap-10 pb-20 md:p-0 border-b md:border-none border-light-gray-200 last:border-none"
             key={index}
           >
-            <span className="text-description-large font-bold inline-flex items-center gap-5 bg-white shadow p-10 rounded-6 self-start">
+            <span className="text-description-medium md:text-description-large font-semibold md:font-bold inline-flex items-center gap-5 bg-white shadow p-10 rounded-6 self-start">
               <FcClock />
               {el.event_time.slice(0, 5)}
             </span>
