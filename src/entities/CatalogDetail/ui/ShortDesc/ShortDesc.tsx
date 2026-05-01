@@ -9,7 +9,7 @@ interface IProps {
 function ShortDesc({ description }: IProps) {
   return (
     <div className={classBlock}>
-      <Heading variyant="medium" className="mb-10">
+      <Heading variyant="medium" className="mb-15">
         Краткое описание
       </Heading>
       <Description className="text-gray-200">{description}</Description>

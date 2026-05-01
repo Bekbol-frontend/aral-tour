@@ -18,7 +18,7 @@ function ImportantInformation({ importantInfo }: IProps) {
 
   return (
     <div className={classBlock}>
-      <Heading variyant="medium" className="mb-10">
+      <Heading variyant="medium" className="mb-15">
         Важная информация
       </Heading>
 

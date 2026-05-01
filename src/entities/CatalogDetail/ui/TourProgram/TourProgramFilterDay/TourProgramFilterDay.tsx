@@ -25,9 +25,10 @@ function TourProgramFilterDay({ itineraries }: IProps) {
     return Array.from(new Set(dayRes));
   }, [itineraries]);
 
-  const filterProgramDay = useMemo(() => {
-    return itineraries.filter((el) => el.day_number === activeDay);
-  }, [itineraries, activeDay]);
+  const filterProgramDay = useMemo(
+    () => itineraries.filter((el) => el.day_number === activeDay),
+    [itineraries, activeDay],
+  );
 
   return (
     <div>

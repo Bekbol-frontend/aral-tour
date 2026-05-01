@@ -10,7 +10,7 @@ interface IProps {
 function TourProgram({ itineraries }: IProps) {
   return (
     <div className={classBlock}>
-      <Heading variyant="medium" className="mb-20">
+      <Heading variyant="medium" className="mb-15">
         Программа тура
       </Heading>
       <TourProgramFilterDay itineraries={itineraries} />

@@ -7,7 +7,7 @@ export interface IItineraries {
   activity_description: string;
 }
 
-interface IFeatures {
+export interface ITourFeatures {
   id: number;
   name: string;
   description: string;
@@ -65,7 +65,7 @@ export interface ICatalogDetail {
   main_image: string;
   images: ITourImage[];
   itineraries: IItineraries[];
-  features: IFeatures[];
+  features: ITourFeatures[];
   faq: IFaqDetail[];
   accommodations: IAccommodations[];
   reviews: DetailReview[];
