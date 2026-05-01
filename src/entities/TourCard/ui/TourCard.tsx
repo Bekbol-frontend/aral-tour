@@ -44,7 +44,11 @@ function TourCard(props: IProps) {
   } = props;
 
   return (
-    <div className="border-[1] border-light-gray-250 rounded-15 p-5 group">
+    <div className="border-[1] border-light-gray-250 rounded-15 p-5 group relative">
+      <Link
+        href={`${appRoutes.catalog}/${slug}`}
+        className="absolute inset-0 z-1"
+      />
       <div className="h-[280] md:h-[280] rounded-10 overflow-hidden">
         <Image
           src={`${env.baseUrl}${imgUrl}`}
@@ -93,7 +97,7 @@ function TourCard(props: IProps) {
           {t("from")} {price} $
         </Title>
 
-        <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
+        <div className="flex items-center justify-between gap-10 flex-col md:flex-row relative z-2">
           <div className="flex flex-1 w-full gap-5 md:gap-10">
             <button
               className="btn bg-primary-300 text-secondary-300 flex-1 md:flex-0"
