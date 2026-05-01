@@ -20,8 +20,8 @@ function CatalogDetail(props: IProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
         <CatalogImages data={images} />
         <CatalogInfo {...data} />
-        <ImportantInformation importantInfo={important_info} />
-        <ShortDesc description={description} />
+        {/* <ImportantInformation importantInfo={important_info} /> */}
+        {/* <ShortDesc description={description} /> */}
       </div>
     </div>
   );
