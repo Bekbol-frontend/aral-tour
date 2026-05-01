@@ -4,6 +4,7 @@ import CatalogInfo from "./CatalogInfo/CatalogInfo";
 import CatalogTitle from "./CatalogTitle/CatalogTitle";
 import ImportantInformation from "./ImportantInformation/ImportantInformation";
 import ShortDesc from "./ShortDesc/ShortDesc";
+import TourProgram from "./TourProgram/TourProgram";
 
 interface IProps {
   data: ICatalogDetail;
@@ -11,7 +12,7 @@ interface IProps {
 
 function CatalogDetail(props: IProps) {
   const { data } = props;
-  const { title, images, important_info, description } = data;
+  const { title, images, important_info, description, itineraries } = data;
 
   return (
     <div>
@@ -22,6 +23,7 @@ function CatalogDetail(props: IProps) {
         <CatalogInfo {...data} />
         <ImportantInformation importantInfo={important_info} />
         <ShortDesc description={description} />
+        <TourProgram itineraries={itineraries} />
       </div>
     </div>
   );

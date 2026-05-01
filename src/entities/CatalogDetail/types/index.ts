@@ -1,7 +1,6 @@
-import { IReview } from "@/entities/Review/model/types";
 import { ITourCategory, ITourImage } from "@/entities/Tour";
 
-interface IItineraries {
+export interface IItineraries {
   day_number: number;
   event_time: string;
   activity_title: string;
