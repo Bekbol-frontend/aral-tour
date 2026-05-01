@@ -1,5 +1,7 @@
+"use client";
 import { Title } from "@/shared/ui/Title";
-import DOMPurify from "isomorphic-dompurify";
+import { useEffect, useState } from "react";
+import DOMPurify from "dompurify";
 import { classBlock } from "../../classBlock";
 
 interface IProps {
@@ -7,13 +9,17 @@ interface IProps {
 }
 
 function ImportantInformation({ importantInfo }: IProps) {
-  const cleanHTML = DOMPurify.sanitize(importantInfo);
+  const [sanitized, setSanitized] = useState("");
+
+  useEffect(() => {
+    setSanitized(DOMPurify.sanitize(importantInfo));
+  }, [importantInfo]);
 
   return (
     <div className={classBlock}>
       <Title className="mb-10">Важная информация</Title>
 
-      <div dangerouslySetInnerHTML={{ __html: cleanHTML }} />
+      <div dangerouslySetInnerHTML={{ __html: sanitized }} />
     </div>
   );
 }
