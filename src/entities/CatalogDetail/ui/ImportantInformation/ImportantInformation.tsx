@@ -1,8 +1,9 @@
 "use client";
-import { Title } from "@/shared/ui/Title";
+
 import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import { classBlock } from "../../classBlock";
+import { Heading } from "@/shared/ui/Heading";
 
 interface IProps {
   importantInfo: string;
@@ -17,7 +18,9 @@ function ImportantInformation({ importantInfo }: IProps) {
 
   return (
     <div className={classBlock}>
-      <Title className="mb-10">Важная информация</Title>
+      <Heading variyant="medium" className="mb-10">
+        Важная информация
+      </Heading>
 
       <div dangerouslySetInnerHTML={{ __html: sanitized }} />
     </div>

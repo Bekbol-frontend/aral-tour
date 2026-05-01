@@ -1,6 +1,6 @@
 import { Description } from "@/shared/ui/Description";
-import { Title } from "@/shared/ui/Title";
 import { classBlock } from "../../classBlock";
+import { Heading } from "@/shared/ui/Heading";
 
 interface IProps {
   description: string;
@@ -9,8 +9,10 @@ interface IProps {
 function ShortDesc({ description }: IProps) {
   return (
     <div className={classBlock}>
-      <Title className="mb-10">Краткое описание</Title>
-      <Description className="text-gray-250">{description}</Description>
+      <Heading variyant="medium" className="mb-10">
+        Краткое описание
+      </Heading>
+      <Description className="text-gray-200">{description}</Description>
     </div>
   );
 }

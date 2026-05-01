@@ -1,7 +1,7 @@
-import { Title } from "@/shared/ui/Title";
 import { IItineraries } from "../../types";
 import TourProgramFilterDay from "./TourProgramFilterDay/TourProgramFilterDay";
 import { classBlock } from "../../classBlock";
+import { Heading } from "@/shared/ui/Heading";
 
 interface IProps {
   itineraries: IItineraries[];
@@ -10,7 +10,9 @@ interface IProps {
 function TourProgram({ itineraries }: IProps) {
   return (
     <div className={classBlock}>
-      <Title className="mb-20">Программа тура</Title>
+      <Heading variyant="medium" className="mb-20">
+        Программа тура
+      </Heading>
       <TourProgramFilterDay itineraries={itineraries} />
     </div>
   );
