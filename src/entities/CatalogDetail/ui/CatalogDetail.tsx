@@ -21,7 +21,7 @@ function CatalogDetail(props: IProps) {
         <CatalogImages data={images} />
         <CatalogInfo {...data} />
         <ImportantInformation importantInfo={important_info} />
-        {/* <ShortDesc description={description} /> */}
+        <ShortDesc description={description} />
       </div>
     </div>
   );
