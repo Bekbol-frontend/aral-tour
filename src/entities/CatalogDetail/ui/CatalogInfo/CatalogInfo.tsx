@@ -10,7 +10,7 @@ import { useCallback, useState } from "react";
 import {
   FaEye,
   FaMapMarked,
-  FaPhone,
+  FaPhoneAlt,
   FaUserCheck,
   FaUsers,
 } from "react-icons/fa";
@@ -123,7 +123,7 @@ function CatalogInfo(props: IProps) {
             href={`tel:${phone}`}
             className="btn bg-secondary-350 text-primary-300"
           >
-            <FaPhone /> {phone}
+            <FaPhoneAlt /> {phone}
           </a>
         </div>
 
