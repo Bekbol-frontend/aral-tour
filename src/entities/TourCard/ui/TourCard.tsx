@@ -77,7 +77,7 @@ function TourCard(props: IProps) {
           </Description>
         </div>
 
-        <div className="flex gap-10 items-center mb-15 md:mb-20 border-b-[1] border-light-gray-250 py-10">
+        <div className="flex gap-10 items-center mb-15 md:mb-20 border-b border-light-gray-250 py-10">
           <div className="w-[40] h-[40] inline-flex items-center justify-center rounded-full bg-primary-300 text-secondary-300 shadow">
             <Description variyant="large">{rating}</Description>
           </div>

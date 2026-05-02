@@ -1,24 +1,23 @@
 "use client";
 
+import { ICatalogDetailReview } from "@/entities/CatalogDetail/model/types";
 import { useCallback, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { Modal } from "@/shared/ui/Modal";
+import { YoutubePlayer } from "@/shared/ui/YoutubePlayer";
+import ReviewSwiperNavigate from "./ReviewSwiperNavigate/ReviewSwiperNavigate";
+import CatalogReviewSwiperItem from "./CatalogReviewSwiperItem/CatalogReviewSwiperItem";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { IReview } from "../../model/types";
-import ReviewSwiperNavigate from "./ReviewSwiperNavigate/ReviewSwiperNavigate";
-import { Modal } from "@/shared/ui/Modal";
-import { YoutubePlayer } from "@/shared/ui/YoutubePlayer";
-import { ReviewCard } from "@/entities/ReviewsList";
-
 interface IProps {
-  data: IReview[];
+  catalogReview: ICatalogDetailReview[];
 }
 
-function ReviewSwiper({ data }: IProps) {
+function CatalogReviewSwiper({ catalogReview }: IProps) {
   const [modal, setModal] = useState(false);
   const [urlYoutube, setUrlYoutube] = useState("");
   const [_, setInit] = useState(false);
@@ -35,6 +34,8 @@ function ReviewSwiper({ data }: IProps) {
     setModal(true);
     setUrlYoutube(url);
   }, []);
+
+  if (!catalogReview.length) return null;
 
   return (
     <>
@@ -57,16 +58,16 @@ function ReviewSwiper({ data }: IProps) {
           }}
           className="pb-20!"
         >
-          {data.map((el) => (
+          {catalogReview.map((el) => (
             <SwiperSlide key={el.id}>
-              <ReviewCard
-                onShowModal={onShowModal}
-                videoUrl={el.video_url}
+              <CatalogReviewSwiperItem
                 userName={el.user_name}
+                email={el.email}
                 rating={el.rating}
-                city={el.city}
-                title={el.tour.title}
                 comment={el.comment}
+                videoUrl={el.video_url}
+                createdAt={el.created_at}
+                onShowModal={onShowModal}
               />
             </SwiperSlide>
           ))}
@@ -82,4 +83,4 @@ function ReviewSwiper({ data }: IProps) {
   );
 }
 
-export default ReviewSwiper;
+export default CatalogReviewSwiper;

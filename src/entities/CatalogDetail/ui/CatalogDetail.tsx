@@ -22,6 +22,7 @@ function CatalogDetail(props: IProps) {
     itineraries,
     features,
     id,
+    reviews,
   } = data;
 
   return (
@@ -37,7 +38,7 @@ function CatalogDetail(props: IProps) {
         <TourFeatures features={features} />
       </div>
 
-      <CatalogReview tourId={id} />
+      <CatalogReview tourId={id} catalogReview={reviews} />
     </div>
   );
 }

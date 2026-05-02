@@ -34,7 +34,7 @@ interface IAccommodations {
   image: string;
 }
 
-interface DetailReview {
+export interface ICatalogDetailReview {
   id: number;
   user_name: string;
   email: string;
@@ -68,5 +68,5 @@ export interface ICatalogDetail {
   features: ITourFeatures[];
   faq: IFaqDetail[];
   accommodations: IAccommodations[];
-  reviews: DetailReview[];
+  reviews: ICatalogDetailReview[];
 }
