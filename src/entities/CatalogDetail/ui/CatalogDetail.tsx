@@ -1,3 +1,4 @@
+import { Contact } from "@/entities/Contact";
 import { ICatalogDetail } from "../model/types";
 import CatalogImages from "./CatalogImages/CatalogImages";
 import CatalogInfo from "./CatalogInfo/CatalogInfo";
@@ -39,6 +40,7 @@ function CatalogDetail(props: IProps) {
       </div>
 
       <CatalogReview tourId={id} catalogReview={reviews} />
+      <Contact />
     </div>
   );
 }
