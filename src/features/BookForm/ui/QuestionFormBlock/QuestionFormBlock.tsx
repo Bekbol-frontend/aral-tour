@@ -170,7 +170,7 @@ function QuestionFormBlock() {
       );
 
       if (!res.data.success) {
-        throw new Error("error");
+        throw new Error(res.data.message);
       }
 
       toast.success(res.data.message);

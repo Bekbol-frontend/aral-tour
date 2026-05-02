@@ -1,6 +1,6 @@
 "use client";
 
-import { IItineraries } from "@/entities/CatalogDetail/types";
+import { IItineraries } from "@/entities/CatalogDetail/model/types";
 import { clsx } from "@/shared/lib/clsx";
 import { Description } from "@/shared/ui/Description";
 import { Title } from "@/shared/ui/Title";

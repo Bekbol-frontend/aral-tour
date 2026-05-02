@@ -2,8 +2,8 @@
 
 import { useMemo } from "react";
 import { Heading } from "@/shared/ui/Heading";
-import { classBlock } from "../../classBlock";
-import { ITourFeatures } from "../../types";
+import { classBlock } from "../../model/classBlock";
+import { ITourFeatures } from "../../model/types";
 import TourFeaturesItem from "./TourFeaturesItem/TourFeaturesItem";
 
 interface IProps {

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
-import { classBlock } from "../../classBlock";
+import { classBlock } from "../../model/classBlock";
 import { Heading } from "@/shared/ui/Heading";
 
 interface IProps {

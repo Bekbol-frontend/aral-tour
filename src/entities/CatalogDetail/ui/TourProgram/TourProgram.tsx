@@ -1,6 +1,6 @@
-import { IItineraries } from "../../types";
+import { IItineraries } from "../../model/types";
 import TourProgramFilterDay from "./TourProgramFilterDay/TourProgramFilterDay";
-import { classBlock } from "../../classBlock";
+import { classBlock } from "../../model/classBlock";
 import { Heading } from "@/shared/ui/Heading";
 
 interface IProps {

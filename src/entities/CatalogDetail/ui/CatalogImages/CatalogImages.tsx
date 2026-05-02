@@ -15,7 +15,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { clsx } from "@/shared/lib/clsx";
-import { classBlock } from "../../classBlock";
+import { classBlock } from "../../model/classBlock";
 
 interface IProps {
   data: ITourImage[];

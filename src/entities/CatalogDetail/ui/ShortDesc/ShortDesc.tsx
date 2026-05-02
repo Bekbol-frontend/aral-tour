@@ -1,5 +1,5 @@
 import { Description } from "@/shared/ui/Description";
-import { classBlock } from "../../classBlock";
+import { classBlock } from "../../model/classBlock";
 import { Heading } from "@/shared/ui/Heading";
 
 interface IProps {

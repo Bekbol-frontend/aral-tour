@@ -1,4 +1,4 @@
-import { ICatalogDetail } from "../types";
+import { ICatalogDetail } from "../model/types";
 import CatalogImages from "./CatalogImages/CatalogImages";
 import CatalogInfo from "./CatalogInfo/CatalogInfo";
 import CatalogReview from "./CatalogReview/CatalogReview";
@@ -14,8 +14,15 @@ interface IProps {
 
 function CatalogDetail(props: IProps) {
   const { data } = props;
-  const { title, images, important_info, description, itineraries, features } =
-    data;
+  const {
+    title,
+    images,
+    important_info,
+    description,
+    itineraries,
+    features,
+    id,
+  } = data;
 
   return (
     <div>
@@ -30,7 +37,7 @@ function CatalogDetail(props: IProps) {
         <TourFeatures features={features} />
       </div>
 
-      <CatalogReview />
+      <CatalogReview tourId={id} />
     </div>
   );
 }

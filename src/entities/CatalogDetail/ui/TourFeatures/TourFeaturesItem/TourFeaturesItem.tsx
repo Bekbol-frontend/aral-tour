@@ -1,4 +1,4 @@
-import { ITourFeatures } from "@/entities/CatalogDetail/types";
+import { ITourFeatures } from "@/entities/CatalogDetail/model/types";
 import { clsx } from "@/shared/lib/clsx";
 import { Description } from "@/shared/ui/Description";
 

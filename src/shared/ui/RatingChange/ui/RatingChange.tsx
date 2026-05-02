@@ -4,10 +4,11 @@ import { useState } from "react";
 
 interface IProps {
   className?: string;
+  rating: number;
+  onChangeRating: (rating: number) => void;
 }
 
-function RatingChange({ className = "" }: IProps) {
-  const [rating, setRating] = useState(0);
+function RatingChange({ className = "", rating, onChangeRating }: IProps) {
   const [hover, setHover] = useState(0);
 
   return (
@@ -23,7 +24,7 @@ function RatingChange({ className = "" }: IProps) {
               type="button"
               className={clsx(
                 [
-                  "bg-base-border inline-flex w-[24] h-[24] shadow cursor-pointer",
+                  "bg-base-border inline-flex w-[24] h-[24] shadow cursor-pointer transition-all duration-300 ease-in-out scale-100 hover:scale-130",
                 ],
                 {
                   " bg-secondary-150 ": index <= (hover || rating),
@@ -33,10 +34,14 @@ function RatingChange({ className = "" }: IProps) {
                 clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
               }}
               onClick={() => {
-                setRating(index);
+                onChangeRating(index);
               }}
-              onMouseEnter={() => setHover(index)}
-              onMouseLeave={() => setHover(rating)}
+              onMouseEnter={() => {
+                setHover(index);
+              }}
+              onMouseLeave={() => {
+                setHover(0);
+              }}
             />
           );
         })}

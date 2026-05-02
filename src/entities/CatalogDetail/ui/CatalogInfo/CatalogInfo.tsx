@@ -14,7 +14,7 @@ import {
   FaUserCheck,
   FaUsers,
 } from "react-icons/fa";
-import { classBlock } from "../../classBlock";
+import { classBlock } from "../../model/classBlock";
 
 interface IProps {
   slogan: string;

@@ -4,7 +4,11 @@ import { Heading } from "@/shared/ui/Heading";
 import CatalogReviewModal from "./CatalogReviewModal/CatalogReviewModal";
 import { useCallback, useState } from "react";
 
-function CatalogReview() {
+interface IProps {
+  tourId: number;
+}
+
+function CatalogReview({ tourId }: IProps) {
   const [modal, setModal] = useState(false);
 
   const onShowModal = useCallback(() => {
@@ -31,7 +35,7 @@ function CatalogReview() {
         </div>
       </div>
 
-      <CatalogReviewModal open={modal} onClose={onCloseModal} />
+      <CatalogReviewModal open={modal} onClose={onCloseModal} tourId={tourId} />
     </>
   );
 }
