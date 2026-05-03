@@ -54,13 +54,13 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `https://aral-tour.vercel.app/${locale}`,
+      url: `${webUrl}/${locale}`,
       siteName: "Aral Sea Tour",
       locale,
       type: "website",
       images: [
         {
-          url: `https://aral-tour.vercel.app/logo.jpg`,
+          url: `${webUrl}/logo.jpg`,
           width: 1200,
           height: 630,
         },
@@ -71,7 +71,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: [`https://aral-tour.vercel.app/logo.jpg`],
+      images: [`${webUrl}/logo.jpg`],
     },
 
     robots: {
