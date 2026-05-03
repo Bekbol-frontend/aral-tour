@@ -93,5 +93,21 @@
   "HeroSwiper": {
     "Pick a tour": "Pick a tour",
     "Book hostel": "Book hostel"
+  },
+
+  "SEO": {
+    "title": "Aral Sea Tours Uzbekistan – Visit Moynaq & Nukus | Aralseatour",
+    "description": "Explore the Aral Sea in Uzbekistan with unforgettable tours to Moynaq and Nukus. Discover the ship cemetery, desert landscapes, and authentic Karakalpak culture with expert local guides.",
+    "area": "Aralseatour, Aral Sea region, Moynaq and Nukus, Karakalpakstan, Uzbekistan, Xiva, Shilpiq, Xorezm, Xojeli, Nokis, Tashkent",
+
+    "keywords": [
+      "aral sea tour",
+      "aral sea tours uzbekistan",
+      "moynaq ship cemetery",
+      "nukus tours",
+      "karakalpakstan travel",
+      "aral sea trip",
+      "uzbekistan tours"
+    ]
   }
 }

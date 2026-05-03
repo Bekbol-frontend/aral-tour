@@ -93,5 +93,19 @@
   "HeroSwiper": {
     "Pick a tour": "Tur tanlash",
     "Book hostel": "Xostel bandlash"
+  },
+
+  "SEO": {
+    "title": "Orol dengiziga sayohat – Mo‘ynoq va Nukusga turlar | Aralseatour",
+    "description": "Aralseatour, Orol dengiziga unutilmas sayohatni kashf eting! Mo‘ynoq va Nukus bo‘ylab turlar, kema qabristoni, cho‘l manzaralari va haqiqiy Qoraqalpoq madaniyatini tajribali gidlar bilan his qiling.",
+    "area": "Orol dengizi hududi, Mo‘ynoq va Nukus, Qoraqalpog‘iston, O‘zbekiston, Xiva, Chilpiq, Xorazm, Xo‘jayli, Nukus, Toshkent",
+    "keywords": [
+      "orol dengizi sayohati",
+      "orol dengizi turlari",
+      "mo‘ynoq sayohati",
+      "nukus turlari",
+      "qoraqalpog‘iston sayohati",
+      "orol dengizi safari"
+    ]
   }
 }
