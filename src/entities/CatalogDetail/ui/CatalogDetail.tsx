@@ -32,7 +32,7 @@ function CatalogDetail(props: IProps) {
 
   return (
     <>
-      <Section className="pb-0!">
+      <Section className="pb-0! bg-white!">
         <Container>
           <CatalogTitle title={title} />
 

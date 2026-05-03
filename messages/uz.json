@@ -29,7 +29,25 @@
     "reviews": "sharhlar",
     "Book": "Bandlash",
     "from": "dan",
-    "Show more": "Batafsil"
+    "Show more": "Batafsil",
+
+    "The price depends on the number of people in the group": "*Narx guruhdagi odamlar soniga bog‘liq",
+    "Maximum number of travelers": "Sayohatchilarning maksimal soni",
+    "Age": "Yosh",
+    "Road map": "Yo‘l xaritasi",
+    "Important information": "Muhim ma’lumot",
+    "Brief description": "Qisqacha tavsif",
+    "Tour program": "Ekskursiya dasturi",
+    "The price includes": "Narxga kiradi",
+    "Not included": "Kiritilmagan",
+    "What memories do you have from this trip": "Bu sayohatdan qanday xotiralaringiz bor?",
+    "Write a review": "Sharh yozish",
+    "Fill in the field": "Maydonni to‘ldirish",
+    "Loading": "Yuklanmoqda...",
+    "Send": "Yuborish",
+    "Your full name": "To‘liq ismingiz",
+    "Your email": "Email manzilingiz",
+    "Comment": "Izoh"
   },
 
   "About": {

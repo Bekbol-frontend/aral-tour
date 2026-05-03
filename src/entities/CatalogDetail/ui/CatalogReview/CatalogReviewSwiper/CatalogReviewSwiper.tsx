@@ -39,7 +39,7 @@ function CatalogReviewSwiper({ catalogReview }: IProps) {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative mt-30 md:mt-40">
         <Swiper
           spaceBetween={10}
           navigation={{

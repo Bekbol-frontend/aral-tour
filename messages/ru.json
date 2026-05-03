@@ -29,7 +29,25 @@
     "reviews": "отзывы",
     "Book": "Бронь",
     "from": "от",
-    "Show more": "Показать больше"
+    "Show more": "Показать больше",
+
+    "The price depends on the number of people in the group": "*Цена зависит от количества человек в группе.",
+    "Maximum number of travelers": "Максимальное количество путешественников",
+    "Age": "Возраст",
+    "Road map": "Дорожная карта",
+    "Important information": "Важная информация",
+    "Brief description": "Краткое описание",
+    "Tour program": "Программа тура",
+    "The price includes": "В стоимость входит",
+    "Not included": "Не входит",
+    "What memories do you have from this trip": "Какие воспоминания у вас остались от этой поездки?",
+    "Write a review": "Написать отзыв",
+    "Fill in the field": "Заполните поле",
+    "Loading": "Загрузка...",
+    "Send": "Отправить",
+    "Your full name": "Ваше полное имя",
+    "Your email": "Электронная почта",
+    "Comment": "Комментарий"
   },
 
   "About": {

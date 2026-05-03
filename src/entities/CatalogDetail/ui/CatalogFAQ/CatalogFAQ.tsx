@@ -14,7 +14,7 @@ function CatalogFAQ({ data }: IProps) {
   }
 
   return (
-    <Section>
+    <Section className="bg-white">
       <MainTitle title="FAQ" noTranslate />
       <Container>
         <div className="flex flex-col gap-10">
@@ -26,6 +26,7 @@ function CatalogFAQ({ data }: IProps) {
               <summary className="collapse-title">
                 <Description>{el.title || `FAQ - ${i + 1}`}</Description>
               </summary>
+
               <div className="collapse-content">
                 <div className="flex flex-col gap-10">
                   {el.questions.map((el) => (
@@ -36,6 +37,7 @@ function CatalogFAQ({ data }: IProps) {
                       <summary className="collapse-title">
                         <Description>{el.question}</Description>
                       </summary>
+
                       <div className="collapse-content">
                         <Description>{el.answer}</Description>
                       </div>

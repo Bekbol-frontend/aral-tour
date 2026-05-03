@@ -29,7 +29,25 @@
     "reviews": "reviews",
     "Book": "Book",
     "from": "from",
-    "Show more": "Show more"
+    "Show more": "Show more",
+
+    "The price depends on the number of people in the group": "*The price depends on the number of people in the group",
+    "Maximum number of travelers": "Maximum number of travelers",
+    "Age": "Age",
+    "Road map": "Road map",
+    "Important information": "Important information",
+    "Brief description": "Brief description",
+    "Tour program": "Tour program",
+    "The price includes": "The price includes",
+    "Not included": "Not included",
+    "What memories do you have from this trip": "What memories do you have from this trip?",
+    "Write a review": "Write a review",
+    "Fill in the field": "Fill in the field",
+    "Loading": "Loading...",
+    "Send": "Send",
+    "Your full name": "Your full name",
+    "Your email": "Your email",
+    "Comment": "Comment"
   },
 
   "About": {

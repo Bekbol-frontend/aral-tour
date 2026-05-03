@@ -90,7 +90,7 @@ function CatalogInfo(props: IProps) {
             {t("from")} {price} $
           </Heading>
           <Description className="text-gray-150">
-            *Цена зависит от количества человек в группе.
+            {t("The price depends on the number of people in the group")}
           </Description>
         </div>
 
@@ -101,7 +101,7 @@ function CatalogInfo(props: IProps) {
               <Title>{max_people}+</Title>
             </div>
             <Description className="text-gray-150">
-              Максимальное количество путешественников
+              {t("Maximum number of travelers")}
             </Description>
           </div>
           <div>
@@ -109,7 +109,7 @@ function CatalogInfo(props: IProps) {
               <FaUserCheck className="text-secondary-200 text-title-large" />
               <Title>{min_age}+</Title>
             </div>
-            <Description className="text-gray-150">Возраст</Description>
+            <Description className="text-gray-150">{t("Age")}</Description>
           </div>
         </div>
 
@@ -118,7 +118,7 @@ function CatalogInfo(props: IProps) {
             className="btn bg-primary-350 text-secondary-300"
             onClick={onShowModal}
           >
-            Забронировать
+            {t("Book")}
           </button>
           <a
             href={`tel:${phone}`}
@@ -135,7 +135,7 @@ function CatalogInfo(props: IProps) {
             </span>
             <Description>{routes}</Description>
           </div>
-          <Description className="text-gray-150">Дорожная карта</Description>
+          <Description className="text-gray-150">{t("Road map")}</Description>
         </div>
       </div>
 

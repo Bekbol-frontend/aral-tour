@@ -54,7 +54,7 @@ function TourProgramFilterDay({ itineraries }: IProps) {
               {el.event_time.slice(0, 5)}
             </span>
             <div className="flex-1 w-full bg-white border border-light-gray-200 p-15 rounded-6">
-              <Title variyant="medium" className="mb-[7]">
+              <Title variyant="small" className="mb-[7] font-bold!">
                 {el.activity_title}
               </Title>
               <Description variyant="medium">

@@ -2,16 +2,19 @@ import { IItineraries } from "../../model/types";
 import TourProgramFilterDay from "./TourProgramFilterDay/TourProgramFilterDay";
 import { classBlock } from "../../model/classBlock";
 import { Heading } from "@/shared/ui/Heading";
+import { getTranslations } from "next-intl/server";
 
 interface IProps {
   itineraries: IItineraries[];
 }
 
-function TourProgram({ itineraries }: IProps) {
+async function TourProgram({ itineraries }: IProps) {
+  const t = await getTranslations("TourCard");
+
   return (
     <div className={classBlock}>
       <Heading variyant="medium" className="mb-15">
-        Программа тура
+        {t("Tour program")}
       </Heading>
       <TourProgramFilterDay itineraries={itineraries} />
     </div>

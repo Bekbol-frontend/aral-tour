@@ -5,12 +5,15 @@ import { Heading } from "@/shared/ui/Heading";
 import { classBlock } from "../../model/classBlock";
 import { ITourFeatures } from "../../model/types";
 import TourFeaturesItem from "./TourFeaturesItem/TourFeaturesItem";
+import { useTranslations } from "next-intl";
 
 interface IProps {
   features: ITourFeatures[];
 }
 
 function TourFeatures({ features }: IProps) {
+  const t = useTranslations("TourCard");
+
   const includedFeatures = useMemo(
     () => features.filter((feature) => feature.is_included),
     [features],
@@ -25,7 +28,7 @@ function TourFeatures({ features }: IProps) {
     <div className={classBlock}>
       <div className="mb-30">
         <Heading variyant="medium" className="mb-15">
-          В стоимость входит
+          {t("The price includes")}
         </Heading>
 
         <div className="flex flex-col gap-20">
@@ -37,7 +40,7 @@ function TourFeatures({ features }: IProps) {
 
       <div>
         <Heading variyant="medium" className="mb-15">
-          Не входит
+          {t("Not included")}
         </Heading>
 
         <div className="flex flex-col gap-20">

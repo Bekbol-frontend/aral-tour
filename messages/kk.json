@@ -29,7 +29,25 @@
     "reviews": "pikirler",
     "Book": "Bronlaw",
     "from": "baslap",
-    "Show more": "Tolıq"
+    "Show more": "Tolıq",
+
+    "The price depends on the number of people in the group": "*Bahası topardaǵı adamlar sanına baylanıslı",
+    "Maximum number of travelers": "Sayaxatshılardıń maksimal sanı",
+    "Age": "Jas",
+    "Road map": "Jol kartası",
+    "Important information": "Áhmietli maǵlıwmat",
+    "Brief description": "Qısqasha sıpatlama",
+    "Tour program": "Ekskursiya baǵdarlaması",
+    "The price includes": "Bahasına kiredi",
+    "Not included": "Kirgizilmegen",
+    "What memories do you have from this trip": "Bul sayaxattan qanday estelikleriniz bar?",
+    "Write a review": "Pikir jazıw",
+    "Fill in the field": "Maydandı toltırıw",
+    "Loading": "Júklenip atır...",
+    "Send": "Jiberiw",
+    "Your full name": "Tolıq atıńız",
+    "Your email": "Elektron pochta",
+    "Comment": "Túsindirme"
   },
 
   "About": {

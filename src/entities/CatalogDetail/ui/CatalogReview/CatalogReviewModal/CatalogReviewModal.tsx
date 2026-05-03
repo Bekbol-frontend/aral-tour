@@ -8,6 +8,7 @@ import PUBLIC_API from "@/shared/api/publicAPI";
 import { Title } from "@/shared/ui/Title";
 import { clsx } from "@/shared/lib/clsx";
 import { RatingChange } from "@/shared/ui/RatingChange";
+import { useTranslations } from "next-intl";
 
 interface IProps {
   open: boolean;
@@ -27,6 +28,8 @@ function CatalogReviewModal({ open, onClose, tourId }: IProps) {
 
   const [rating, setRating] = useState(0);
   const [loading, setLoading] = useState(false);
+
+  const t = useTranslations("TourCard");
 
   const onCloseModal = useCallback(() => {
     onClose();
@@ -141,14 +144,14 @@ function CatalogReviewModal({ open, onClose, tourId }: IProps) {
     <Modal open={open} onClose={onCloseModal}>
       <div>
         <Title variyant="medium" className="mb-15">
-          Написать отзыв
+          {t("Write a review")}
         </Title>
         <form onSubmit={onSubmitReview}>
           <div className="flex flex-col gap-15 mb-20">
             <div>
               <input
                 type="text"
-                placeholder="Ваше полное имя"
+                placeholder={t("Your full name")}
                 className={clsx(["input w-full"], {
                   "input-error": nameValidate,
                 })}
@@ -157,14 +160,14 @@ function CatalogReviewModal({ open, onClose, tourId }: IProps) {
               />
               {nameValidate && (
                 <span className="text-error mt-5 inline-flex font-semibold">
-                  Заполните поле
+                  {t("Fill in the field")}
                 </span>
               )}
             </div>
             <div>
               <input
                 type="email"
-                placeholder="Электронная почта"
+                placeholder={t("Your email")}
                 className={clsx(["input w-full"], {
                   "input-error": emailValidate,
                 })}
@@ -173,7 +176,7 @@ function CatalogReviewModal({ open, onClose, tourId }: IProps) {
               />
               {emailValidate && (
                 <span className="text-error mt-5 inline-flex font-semibold">
-                  Заполните поле
+                  {t("Fill in the field")}
                 </span>
               )}
             </div>
@@ -182,13 +185,13 @@ function CatalogReviewModal({ open, onClose, tourId }: IProps) {
                 className={clsx(["textarea w-full h-[130]"], {
                   "textarea-error": commentValidate,
                 })}
-                placeholder="Bio"
+                placeholder={t("Comment")}
                 value={comment}
                 onChange={onChangeComment}
               />
               {commentValidate && (
                 <span className="text-error mt-5 inline-flex font-semibold">
-                  Заполните поле
+                  {t("Fill in the field")}
                 </span>
               )}
             </div>
@@ -202,7 +205,7 @@ function CatalogReviewModal({ open, onClose, tourId }: IProps) {
               "cursor-not-allowed! opacity-80!": loading,
             })}
           >
-            {loading ? "Загрузка..." : "Отправить"}
+            {loading ? t("Loading") : t("Send")}
           </button>
         </form>
       </div>

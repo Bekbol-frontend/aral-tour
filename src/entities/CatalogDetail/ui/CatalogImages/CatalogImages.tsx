@@ -89,7 +89,7 @@ function CatalogImages({ data }: IProps) {
               height={100}
               priority
               className={clsx(["object-cover w-full! h-full! rounded-6"], {
-                "border-2 border-secondary-300": activeIndex === index,
+                "border-2 border-secondary-200 shadow": activeIndex === index,
               })}
             />
           </SwiperSlide>
