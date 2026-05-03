@@ -1,9 +1,7 @@
 import { CatalogDetail, ICatalogDetail } from "@/entities/CatalogDetail";
 import { getServerClient } from "@/shared/api";
 import { IData } from "@/shared/types/data";
-import { Container } from "@/shared/ui/Container";
 import { EmptyData } from "@/shared/ui/EmptyData";
-import { Section } from "@/shared/ui/Section";
 
 const getCatalogDetail = async (slug: string) => {
   const API = await getServerClient();
@@ -22,13 +20,7 @@ async function CatalogDetailPage({
     return <EmptyData />;
   }
 
-  return (
-    <Section>
-      <Container>
-        <CatalogDetail data={res.data.data} />
-      </Container>
-    </Section>
-  );
+  return <CatalogDetail data={res.data.data} />;
 }
 
 export default CatalogDetailPage;

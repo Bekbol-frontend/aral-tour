@@ -20,7 +20,7 @@ interface IFaqDetailQuestion {
   answer: string;
 }
 
-interface IFaqDetail {
+export interface ICatalogFaqDetail {
   title: string;
   questions: IFaqDetailQuestion[];
 }
@@ -66,7 +66,7 @@ export interface ICatalogDetail {
   images: ITourImage[];
   itineraries: IItineraries[];
   features: ITourFeatures[];
-  faq: IFaqDetail[];
+  faq: ICatalogFaqDetail[];
   accommodations: IAccommodations[];
   reviews: ICatalogDetailReview[];
 }
