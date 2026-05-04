@@ -3,6 +3,7 @@
 import { Link, usePathname } from "@/i18n/navigation";
 import { appRoutes } from "@/shared/config/route";
 import { useTranslations } from "next-intl";
+import { useMemo } from "react";
 
 const INDEX_CONST = "/";
 
@@ -10,16 +11,24 @@ function Breadcrumbs() {
   const t = useTranslations("HeaderMenu");
   const pathname = usePathname();
 
-  const segments = pathname.split(INDEX_CONST).filter(Boolean);
+  const segments = useMemo(
+    () => pathname.split(INDEX_CONST).filter(Boolean),
+    [pathname],
+  );
 
-  const paths = segments.map((el, index) => {
-    const href = INDEX_CONST + segments.slice(0, index + 1).join(INDEX_CONST);
+  const paths = useMemo(
+    () =>
+      segments.map((el, index) => {
+        const href =
+          INDEX_CONST + segments.slice(0, index + 1).join(INDEX_CONST);
 
-    return {
-      name: decodeURIComponent(el),
-      href,
-    };
-  });
+        return {
+          name: decodeURIComponent(el),
+          href,
+        };
+      }),
+    [segments],
+  );
 
   return (
     <div className="mb-20 w-full overflow-hidden">
