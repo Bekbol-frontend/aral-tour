@@ -11,6 +11,7 @@ import TourProgram from "./TourProgram/TourProgram";
 import CatalogFAQ from "./CatalogFAQ/CatalogFAQ";
 import { Section } from "@/shared/ui/Section";
 import { Container } from "@/shared/ui/Container";
+import { Breadcrumbs } from "@/shared/ui/Breadcrumbs";
 
 interface IProps {
   data: ICatalogDetail;
@@ -34,6 +35,8 @@ function CatalogDetail(props: IProps) {
     <>
       <Section className="pb-0! bg-white!">
         <Container>
+          <Breadcrumbs />
+
           <CatalogTitle title={title} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-30 mb-40">

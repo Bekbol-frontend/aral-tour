@@ -7,7 +7,7 @@ export const menuItems = [
   },
   {
     path: appRoutes.catalog,
-    name: "Tour catalog",
+    name: "catalog",
   },
   {
     path: appRoutes.about,
