@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { clsx } from "@/shared/lib/clsx";
 import styles from "./CatalogCategories.module.css";
+import { useTranslations } from "next-intl";
 
 interface IProps {
   data: ICategory[];
@@ -12,6 +13,7 @@ interface IProps {
 }
 
 function CatalogCategories({ data, category }: IProps) {
+  const t = useTranslations("Catalog");
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -37,7 +39,7 @@ function CatalogCategories({ data, category }: IProps) {
           })}
           onClick={() => handleSearchParams("")}
         >
-          Все
+          {t("All")}
         </button>
         {data.map((el) => (
           <button
