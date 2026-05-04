@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 
 const INDEX_CONST = "/";
+const classNameLink = "text-description-small font-semibold";
 
 function Breadcrumbs() {
   const t = useTranslations("HeaderMenu");
@@ -33,10 +34,7 @@ function Breadcrumbs() {
   return (
     <div className="mb-20 w-full overflow-hidden">
       <div className="overflow-x-auto w-full! whitespace-nowrap pb-5">
-        <Link
-          href={appRoutes.home}
-          className="text-description-small font-semibold"
-        >
+        <Link href={appRoutes.home} className={classNameLink}>
           {t("Home page")}
         </Link>
 
@@ -47,14 +45,9 @@ function Breadcrumbs() {
             <span key={index}>
               {" / "}
               {isLast ? (
-                <span className="text-description-small font-semibold">
-                  {item.name}
-                </span>
+                <span className={classNameLink}>{item.name}</span>
               ) : (
-                <Link
-                  href={item.href}
-                  className="text-description-small font-semibold"
-                >
+                <Link href={item.href} className={classNameLink}>
                   {t(item.name)}
                 </Link>
               )}
