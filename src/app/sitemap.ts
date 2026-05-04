@@ -1,8 +1,7 @@
 import { appRoutes } from "@/shared/config/route";
 import { webUrl } from "@/shared/constants/web.url";
+import { langs } from "@/shared/types/lang";
 import { MetadataRoute } from "next";
-
-const locales = ["en", "ru", "uz", "kk"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -14,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const pages = routes.flatMap((route) =>
-    locales.map((locale) => ({
+    langs.map((locale) => ({
       url:
         route === appRoutes.home
           ? `${webUrl}/${locale}`
